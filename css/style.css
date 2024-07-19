@@ -1,16 +1,4 @@
-/* Paleta de colores:
-lavanda oscuro #B385F2
-azul claro #5854BF
-azul oscuro #021F59
-rosa #F294C8
-moradito #7162D9
 
-crear variables para: 
--fondo 
--shadow
--h1, h2, h3, h4
--parrafos
-*/
 body.darkMode {
     --backgrnd-color: #000714;
     --desc-text: white;
@@ -254,6 +242,11 @@ h1, h2, h3, h4, h5 {
     /* text-shadow: 2px 2px 2px var(--blur-text); */
 }
 
+li.description.work-experience-descr {
+    line-height: 3rem;
+}
+
+
 .work-project-desc {
     text-align: center;
 }
@@ -426,10 +419,9 @@ section.container-experience {
 }
 
 .info-container {
-    padding-top: 35px;
+    padding: 35px;
     background-color: var(--bgn-sections);
     box-shadow: 0 0 4px 3px var(--bgn-sections);
-    padding-bottom: 12px;
 }
 
 body.lightMode .info-container {
@@ -460,7 +452,7 @@ body.lightMode .info-container {
     display: flex;
     justify-content: center;
 }
-
+/* Vista de tablet */
 @media (max-width: 1100px) {
     .container, .last-container {
         width: 90vw;
@@ -483,7 +475,11 @@ body.lightMode .info-container {
         grid-template-columns: repeat(3, 50%);
     }
 }
+/* Vista de mobil */
 @media (max-width: 620px) {
+    .title-section {
+        padding: 0;
+    }
     .container, .last-container {
         width: 90vw;
         display: grid;
@@ -492,6 +488,10 @@ body.lightMode .info-container {
     .project {
         width: 85%;
         height: 400px;
+    }
+    .project.intranet{
+        width: 100%;
+        max-width: 75%;
     }
     .personal-project {
         height: 250px;
@@ -513,6 +513,12 @@ body.lightMode .info-container {
     }
     .front-image {
         text-align: center;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .menu-list ul {
+        display: none;
     }
 }
 
@@ -544,6 +550,10 @@ body.lightMode .info-container {
     color: var(--desc-text);
     font-size: 2rem;
     display: flex;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 .dark-mode-btns {
