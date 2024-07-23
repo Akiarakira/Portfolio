@@ -564,6 +564,15 @@ body.lightMode .info-container {
 .dark-mode-btns div i {
     width: 3rem;
     font-size: 2.2rem;
+    padding: 4px 0;
+}
+
+div.active {
+    text-align: center;
+    margin: auto 0;
+    border-radius: 25px;
+    background: var(--bg-card);
+    box-shadow: 0 0 15px var(--border-card);
 }
 
 .fa-bluesky {
@@ -579,7 +588,8 @@ body.lightMode .info-container {
 .logoImg {
     width: 100%;
     max-width: 50px;
-    margin: 6px;
+    margin: 6px auto;
+
 }
 .logoAlpine, .logoHtmx {
     height: 50px;
