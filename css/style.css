@@ -11,6 +11,7 @@ body.darkMode {
     --border-3: #e91b8d;
     --border-2: #4348df;
     --cards-bgcolor: #090114;
+    --active-theme: #502978;
 }
  
 body.lightMode {
@@ -25,6 +26,7 @@ body.lightMode {
     --border-3: #f12d99;
     --border-2: #4a09b3;
     --cards-bgcolor: #e1d2f5;
+    --active-theme: #a791f5;
 }
 
 body.defaultMode {
@@ -41,6 +43,7 @@ body.defaultMode {
     --contact-icons: white;
     --contact-titleCard: white;
     --cards-bgcolor: #9266d9;
+    --active-theme: #ccc0f6;
 }
 
 * {
@@ -571,8 +574,8 @@ div.active {
     text-align: center;
     margin: auto 0;
     border-radius: 25px;
-    background: var(--bg-card);
-    box-shadow: 0 0 15px var(--border-card);
+    background: var(--active-theme);
+    box-shadow: 0 0 15px var(--active-theme);
 }
 
 .fa-bluesky {
