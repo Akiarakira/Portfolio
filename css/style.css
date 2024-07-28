@@ -303,7 +303,7 @@ section.container-experience {
     height: 26px;
     border: 1.5px solid white;
     color: white;
-    background-color: rgba(137, 43, 226, 0.779);
+    background-color: var(--bg-card);
     text-align: center;
     padding: 2px;
     align-content: center;
@@ -649,6 +649,10 @@ div.active {
     margin: 1rem auto 0;
     padding: 8px;
     position: relative;
+}
+
+.cv-btn a {
+    color: white;
 }
 
 .btn.cv-btn:after {
