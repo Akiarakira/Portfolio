@@ -537,7 +537,7 @@ ul.menuMobileActive {
     width: 100%;
     display: flex !important;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     background: var(--mb-header);
     top: 80px;
     /* margin: 2px; */
@@ -548,7 +548,7 @@ ul.menuMobileActive {
 .mainMenu {
     width: 100%;
     height: 8rem;
-    position: fixed;
+    position: sticky;
     backdrop-filter: blur(10px);
     top: 0;
     z-index: 2;
