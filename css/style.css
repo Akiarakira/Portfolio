@@ -12,6 +12,7 @@ body.darkMode {
     --border-2: #4348df;
     --cards-bgcolor: #090114;
     --active-theme: #FFFF;
+    --mb-header: #140821;
 }
  
 body.lightMode {
@@ -26,12 +27,13 @@ body.lightMode {
     --border-3: #f12d99;
     --border-2: #4a09b3;
     --cards-bgcolor: #e1d2f5;
-    --active-theme: #f12d99;
+    --active-theme: #ccc0f6;
+    --mb-header: #a791f5;
 }
 
 body.defaultMode {
     --bg-card: #502978;
-    --lilac-text: #a791f5;
+    --mb-header: #9266d9;
     --border-1: #021F59;
     --border-3: #F294C8;
     --border-2: #7162D9;
@@ -517,14 +519,31 @@ body.lightMode .info-container {
     .front-image {
         text-align: center;
     }
+    header.mainMenu {
+        backdrop-filter: none;
+        background-color: var(--mb-header);
+        box-shadow: 0 0 18px 6px #5854bf;
+    }
     .mobile-menu {
-        display: block;
+        display: flex !important;
     }
     .menu-list ul {
-        display: none;
+        display: none !important;
     }
 }
 
+
+ul.menuMobileActive {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    background: var(--mb-header);
+    top: 80px;
+    /* margin: 2px; */
+    padding: 30px;
+    /* box-shadow: 0 0 12px 1px grey; */
+}
 /* Header */
 .mainMenu {
     width: 100%;
@@ -610,6 +629,13 @@ div.active {
     width: 100%;
     height: auto;
     padding: 12px;
+}
+
+i.fa-solid.fa-bars {
+    color: white;
+    font-size: 2.2rem;
+    padding: 4px 0;
+    cursor: pointer;
 }
 
 .contact-card {

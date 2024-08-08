@@ -13,17 +13,26 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./css/img/alas.png" type="image/x-icon">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/resize@3.x.x/dist/cdn.min.js"></script>
     <title>Portafolio</title>
 </head>
 
+<script>
+    document.addEventListener('alpine:init', () => {
+        console.log('Alpine init');
+        Alpine.store('mobileMenu', false
+        );
+    })
+</script>
+
 <body id="body" class="defaultMode">
-    <main>
+    <main x-data>
         <header class="mainMenu">
             <section class="menu-list">
-                <div class="mobile-menu">
-                    Menu<i class="fa-solid fa-bars"></i>
+                <div id="dropdownMenu" class="mobile-menu" @click="console.log('click',$store.mobileMenu)">
+                    <i class="fa-solid fa-bars" @click="$store.mobileMenu = !$store.mobileMenu"></i>
                 </div>
-                <ul>
+                <ul :class="$store.mobileMenu ? 'menuMobileActive' : ''">
                     <li><a href="#work-experience">Work Experience</a></li>
                     <li><a href="#experience">Professional Experience</a></li>
                     <!-- <li><a href="#about-me">About Me</a></li> -->
@@ -51,7 +60,7 @@
         <section class="main-container">
             <section class="title-section">
                 <section>
-                    <h1 class="title" id="main_title" x-data="{ message: 'I ❤️ Alpine' }" x-text="">Portfolio: Full Stack Developer</h1>
+                    <h1 class="title" id="main_title">Portfolio: Full Stack Developer</h1>
                     <h2 class="name title">Andreina Di Brigida</h2>
                     <p class="description">I am a skilled web developer with 2 years experience in Full Stack development.</p>
                     <div class="logo-container">
