@@ -320,6 +320,22 @@ section.container-experience {
     transform: scale(1.15);
 }
 
+.paigekelly div.inner:hover,
+.paigekelly div.inner:focus {
+    z-index: 5;
+    background-image: url("./img/Home-Paige-Kelly-Interior-Design-11-03-2025_12_22_AM.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.mbtek div.inner:hover,
+.mbtek div.inner:focus {
+    z-index: 5;
+    background-image: url("./img/Mbtek-–-MBTEK-11-03-2025_12_24_AM.png");
+    background-size: cover;
+    background-position: center;
+}
+
 .bdstreams div.inner:hover,
 .bdstreams div.inner:focus {
     z-index: 5;
@@ -344,7 +360,7 @@ section.container-experience {
 
 .contentbf div.inner:hover,
 .contentbf div.inner:focus {
-    background-image: url("./img/contentboostfactory.jpg");
+    background-image: url("./img/contentboostfactory.png");
     background-size: cover;
     background-position: center;
 }
@@ -667,6 +683,9 @@ i.fa-solid.fa-bars {
 }
 
 .btn.cv-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 150px;
     height: 44px;
     font-size: 1.6rem;
