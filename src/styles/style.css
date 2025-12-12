@@ -149,12 +149,12 @@
   transform: translateX(-50%);
 }
 
-#work-experience .section-title,
+#projects .section-title,
 #experience .section-title {
   font-size: clamp(2.25rem, 4vw, 3.25rem);
 }
 
-#work-experience .section-title::after,
+#projects .section-title::after,
 #experience .section-title::after {
   content: none;
 }

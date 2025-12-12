@@ -5,12 +5,31 @@ import mainJsUrl from '../js/main.js?url';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = 'Full-stack web developer specializing in Shopify and WordPress. Custom development, UX optimization, and high-converting websites.' } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL;
 const faviconHref = `${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}favicon.svg`;
+
+const canonicalUrl = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+const ogImageUrl = Astro.site
+  ? new URL(`${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}img/photo.jpg`, Astro.site).toString()
+  : `${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}img/photo.jpg`;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Andreina Di Brigida',
+  jobTitle: 'Full-Stack Web Developer',
+  url: canonicalUrl || undefined,
+  sameAs: [
+    'https://www.linkedin.com/in/andreina-di-brigida',
+    'https://github.com/Akiarakira',
+    'https://www.instagram.com/andree_gabby/',
+  ],
+};
 ---
 
 <!doctype html>
@@ -21,12 +40,30 @@ const faviconHref = `${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}favicon.svg`;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Andreina Di Brigida" />
+    <meta name="theme-color" content="#101c29" />
+    {canonicalUrl ? <link rel="canonical" href={canonicalUrl} /> : null}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {canonicalUrl ? <meta property="og:url" content={canonicalUrl} /> : null}
+    <meta property="og:image" content={ogImageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
-  <body id="body" class="lightMode bg-cream text-ink font-poppins">
+  <body id="body" class="darkMode bg-cream text-ink font-poppins">
     <main x-data>
       <slot />
       <script type="module" src={mainJsUrl}></script>

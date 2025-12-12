@@ -1,4 +1,23 @@
 ---
+const technologies = [
+  { key: 'html', className: 'tech-html', label: 'HTML5' },
+  { key: 'css', className: 'tech-css', label: 'CSS3' },
+  { key: 'javascript', className: 'tech-javascript', label: 'JavaScript' },
+  { key: 'typescript', className: 'tech-typescript', label: 'TypeScript' },
+  { key: 'php', className: 'tech-php', label: 'PHP' },
+  { key: 'node', className: 'tech-node', label: 'Node.js' },
+  { key: 'react', className: 'tech-react', label: 'React' },
+  { key: 'tailwind', className: 'tech-tailwind', label: 'Tailwind CSS' },
+  { key: 'shopify', className: 'tech-shopify', label: 'Shopify' },
+  { key: 'wordpress', className: 'tech-wordpress', label: 'WordPress' },
+  { key: 'sass', className: 'tech-sass', label: 'Sass' },
+  { key: 'figma', className: 'tech-figma', label: 'Figma' },
+  { key: 'alpine', className: 'tech-alpine', label: 'Alpine.js' },
+  { key: 'htmx', className: 'tech-htmx', label: 'HTMX' },
+  { key: 'mysql', className: 'tech-mysql', label: 'MySQL' },
+  { key: 'mongodb', className: 'tech-mongodb', label: 'MongoDB' },
+  { key: 'hubspot', className: 'tech-hubspot', label: 'HubSpot' },
+];
 ---
 
 <section class="tools-section py-16" id="tools">
@@ -6,29 +25,12 @@
     <div class="tools-card">
       <div class="tools-chip">Tools &amp; Tech</div>
       <div class="tools-grid">
-        <span class="logoImg tech-html" role="img" aria-label="HTML5"></span>
-        <span class="logoImg tech-css" role="img" aria-label="CSS3"></span>
-        <span class="logoImg tech-javascript" role="img" aria-label="JavaScript"></span>
-        <span class="logoImg tech-typescript" role="img" aria-label="TypeScript"></span>
-
-        <span class="logoImg tech-php" role="img" aria-label="PHP"></span>
-        <span class="logoImg tech-node" role="img" aria-label="Node.js"></span>
-        <span class="logoImg tech-react" role="img" aria-label="React"></span>
-        <span class="logoImg tech-tailwind" role="img" aria-label="Tailwind CSS"></span>
-
-        <span class="logoImg tech-shopify" role="img" aria-label="Shopify"></span>
-        <span class="logoImg tech-wordpress" role="img" aria-label="WordPress"></span>
-
-        <span class="logoImg tech-sass" role="img" aria-label="Sass"></span>
-        <span class="logoImg tech-figma" role="img" aria-label="Figma"></span>
-
-        <span class="logoImg tech-alpine" role="img" aria-label="Alpine.js"></span>
-        <span class="logoImg tech-htmx" role="img" aria-label="HTMX"></span>
-
-        <span class="logoImg tech-mysql" role="img" aria-label="MySQL"></span>
-        <span class="logoImg tech-mongodb" role="img" aria-label="MongoDB"></span>
-
-        <span class="logoImg tech-hubspot" role="img" aria-label="HubSpot"></span>
+        {technologies.map((tech) => (
+          <figure class="flex flex-col items-center text-center" aria-label={tech.label}>
+            <span class={`logoImg ${tech.className}`} role="img" aria-label={tech.label}></span>
+            <figcaption class="text-xs mt-2 font-semibold text-muted">{tech.label}</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </div>

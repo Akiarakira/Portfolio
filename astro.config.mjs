@@ -14,9 +14,13 @@ const base = process.env.BASE || '/';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://akiarakira.github.io',
-  base: '/Portfolio',
-  integrations: [alpinejs(), sitemap(), robotsTxt()],
+  site,
+  base,
+  integrations: [alpinejs(), sitemap(), robotsTxt({
+    policy: [
+      { userAgent: '*', allow: '/' },
+    ],
+  })],
 
   vite: {
     plugins: [tailwindcss()]
