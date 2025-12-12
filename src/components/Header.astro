@@ -1,0 +1,27 @@
+---
+---
+
+<header class="mainMenu sticky top-0 z-50 bg-cream dark:bg-surface shadow-elegant">
+    <section class="menu-list max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div id="dropdownMenu" class="mobile-menu md:hidden" @click="console.log('click',$store.mobileMenu)">
+            <i class="fa-solid fa-bars text-2xl text-rose-accent cursor-pointer" @click="$store.mobileMenu = !$store.mobileMenu"></i>
+        </div>
+        <ul :class="$store.mobileMenu ? 'menuMobileActive flex flex-col absolute top-16 left-0 right-0 bg-cream dark:bg-surface shadow-lg' : 'hidden md:flex gap-8'" class="md:flex md:gap-8">
+            <li><a href="#work-experience" class="text-rose-dark font-semibold hover:text-rose-accent transition">Work Experience</a></li>
+            <li><a href="#experience" class="text-rose-dark font-semibold hover:text-rose-accent transition">Professional Experience</a></li>
+            <!-- <li><a href="#personal-projects" class="text-rose-dark font-semibold hover:text-rose-accent transition">Personal Projects</a></li> -->
+        </ul>
+        <div class="dark-mode-btns">
+            <label class="relative inline-flex items-center cursor-pointer select-none" aria-label="Toggle dark mode">
+                <input id="themeToggle" type="checkbox" class="sr-only peer" />
+                <span class="relative w-14 h-8 rounded-full border border-rose-light bg-surface-2 shadow-sm transition-colors peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-rose-accent/40 peer-checked:bg-surface">
+                    <span class="absolute inset-0 flex items-center justify-between px-2 text-rose-accent">
+                        <i class="fa-solid fa-sun text-sm"></i>
+                        <i class="fa-solid fa-moon text-sm"></i>
+                    </span>
+                </span>
+                <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-cream shadow-md transition-transform peer-checked:translate-x-6"></span>
+            </label>
+        </div>
+    </section>
+</header>

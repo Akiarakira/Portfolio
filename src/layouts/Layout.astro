@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import '../styles/style.css';
+import mainJsUrl from '../js/main.js?url';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const baseUrl = import.meta.env.BASE_URL;
+const faviconHref = `${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}favicon.svg`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href={faviconHref} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body id="body" class="lightMode bg-cream text-ink font-poppins">
+    <main x-data>
+      <slot />
+      <script type="module" src={mainJsUrl}></script>
+    </main>
+  </body>
+</html>

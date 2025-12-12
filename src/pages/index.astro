@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ContactCard from '../components/ContactCard.astro';
+import Hero from '../components/Hero.astro';
+import TechStack from '../components/TechStack.astro';
+import WorkExperience from '../components/WorkExperience.astro';
+import ProfessionalExperience from '../components/ProfessionalExperience.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Andreina Di Brigida - Shopify & WordPress Developer">
+  <Header />
+  <ContactCard />
+  <section class="main-container max-w-7xl mx-auto px-4 pt-20 pb-6">
+    <Hero />
+    <TechStack />
+    <WorkExperience />
+    <ProfessionalExperience />
+  </section>
+  <Footer />
+</Layout>

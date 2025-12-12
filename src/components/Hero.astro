@@ -1,0 +1,73 @@
+---
+---
+
+<section class="title-section py-20">
+    <section class="title-container-hero grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 class="title text-5xl md:text-6xl font-lobster text-rose-dark mb-4" id="main_title">
+                <span id="typewriter-text">Full-Stack Developer</span>
+                <span class="typewriter-cursor"></span>
+            </h1>
+            <h2 class="name title text-4xl md:text-5xl font-lobster text-rose-accent mb-6">Andreina Di Brigida</h2>
+            <p class="description text-lg text-gray-700 mb-8 leading-relaxed">I have over 3 years of experience building beautiful, high-converting websites with Shopify and WordPress. Specialized in custom development, UX optimization, and elegant design.</p>
+            <div class="flex gap-4">
+                <a href="./documents/Shopify and WordPress Developer Andreina Di Brigida.pdf" target="_blank" class="btn-primary inline-block">
+                    <i class="fa-solid fa-download mr-2"></i>Download CV
+                </a>
+                <a href="#work-experience" class="btn-secondary inline-block">
+                    <i class="fa-solid fa-arrow-down mr-2"></i>See My Work
+                </a>
+            </div>
+        </div>
+    </section>
+</section>
+
+<script>
+  if (typeof window !== "undefined") {
+    const roles = [
+      "Full-Stack Developer",
+      "Shopify Specialist",
+      "WordPress Expert",
+    ];
+
+    const textEl = document.getElementById("typewriter-text");
+
+    if (textEl) {
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      const typingSpeed = 100;
+      const deletingSpeed = 60;
+      const pauseBetweenRoles = 1500;
+
+      const type = () => {
+        const current = roles[roleIndex];
+
+        if (!isDeleting) {
+          charIndex++;
+          textEl.textContent = current.slice(0, charIndex);
+
+          if (charIndex === current.length) {
+            isDeleting = true;
+            setTimeout(type, pauseBetweenRoles);
+            return;
+          }
+        } else {
+          charIndex--;
+          textEl.textContent = current.slice(0, charIndex);
+
+          if (charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+          }
+        }
+
+        const delay = isDeleting ? deletingSpeed : typingSpeed;
+        setTimeout(type, delay);
+      };
+
+      type();
+    }
+  }
+</script>
