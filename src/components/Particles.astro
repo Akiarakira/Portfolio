@@ -1,0 +1,73 @@
+---
+
+---
+
+<div id="tsparticles" class="absolute inset-0 z-0 pointer-events-none"></div>
+
+<script>
+  if (typeof window !== "undefined") {
+    async function initParticles() {
+      const [{ tsParticles }, { loadSlim }] = await Promise.all([
+        import("@tsparticles/engine"),
+        import("@tsparticles/slim"),
+      ]);
+
+      await loadSlim(tsParticles);
+
+      await tsParticles.load({
+        id: "tsparticles",
+        options: {
+          fullScreen: { enable: false },
+          particles: {
+            move: {
+              enable: true,
+              speed: 0.85,
+            },
+            number: {
+              value: 84,
+            },
+            opacity: {
+              value: {
+                min: 0.22,
+                max: 0.5,
+              },
+            },
+            paint: {
+              fill: {
+                enable: true,
+                color: {
+                  value: ["#fb7185", "#f472b6", "#a855f7", "#22d3ee"],
+                },
+              },
+              stroke: {
+                width: 0,
+                color: {
+                  value: "#ffffff",
+                },
+              },
+            },
+            shape: {
+              type: "star",
+              options: {
+                star: {
+                  close: true,
+                  inset: 2,
+                  sides: 5,
+                },
+              },
+            },
+            size: {
+              value: {
+                min: 2,
+                max: 7,
+              },
+            },
+          },
+          detectRetina: true,
+        },
+      });
+    }
+
+    initParticles();
+  }
+</script>

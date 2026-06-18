@@ -1,21 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import ContactCard from '../components/ContactCard.astro';
-import Hero from '../components/Hero.astro';
-import TechStack from '../components/TechStack.astro';
-import WorkExperience from '../components/WorkExperience.astro';
-import ProfessionalExperience from '../components/ProfessionalExperience.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ContactCard from "../components/ContactCard.astro";
+import Hero from "../components/Hero.astro";
+import Particles from "../components/Particles.astro";
+import TechStack from "../components/TechStack.astro";
+import WorkExperience from "../components/WorkExperience.astro";
+import ProfessionalExperience from "../components/ProfessionalExperience.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Andreina Di Brigida - Shopify & WordPress Developer">
   <Header />
   <ContactCard />
-  <section class="main-container max-w-7xl mx-auto px-4 pt-20 pb-6">
-    <Hero />
-    <TechStack />
-    <WorkExperience />
+  <section class="relative overflow-hidden pt-20">
+    <Particles />
+    <section class="main-container relative z-10 max-w-7xl mx-auto px-4 pb-6">
+      <Hero />
+      <TechStack />
+      <WorkExperience />
+    </section>
+  </section>
+  <section class="main-container max-w-7xl mx-auto px-4 pb-6">
     <ProfessionalExperience />
   </section>
   <Footer />
