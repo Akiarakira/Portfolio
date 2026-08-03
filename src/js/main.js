@@ -7,7 +7,7 @@ if (themeToggle && bodyElement) {
     const THEME_KEY = "theme";
 
     function getPreferredTheme() {
-        return "dark";
+        return localStorage.getItem(THEME_KEY) || "dark";
     }
 
     function applyTheme(theme) {
