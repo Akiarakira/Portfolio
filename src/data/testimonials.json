@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Daniela Briceño",
+    "role": "Graphic Designer",
+    "company": "mbtek",
+    "avatar": "",
+    "rating": 5,
+    "quote": "If you're looking for someone who really makes things happen, that's Andreina. She has great attention to detail and handles multiple projects at once, always delivering on time. I would work with her a thousand times more without hesitation. Excellent programmer!"
+  },
+  {
+    "name": "Juliana González",
+    "role": "Website Manager",
+    "company": "A Teamwork",
+    "avatar": "",
+    "rating": 5,
+    "quote": "Andreina was a key contributor on my development team, moving confidently across full-code, WordPress, and Webflow projects. She adapts technically, learns fast, and always seeks to fully understand a problem before proposing solutions. A positive, committed teammate I highly recommend."
+  },
+  {
+    "name": "Wilfredo Borras",
+    "role": "Marketing SEM Specialist",
+    "company": "A Teamwork",
+    "avatar": "",
+    "rating": 5,
+    "quote": "Andreina was an absolute lifesaver across several marketing campaigns, building high-converting, flawless websites at lightning speed even under intense launch pressure. Her ability to deliver perfect work on tight timelines completely optimized our workflow."
+  },
+  {
+    "name": "Jose Oroño",
+    "role": "CEO",
+    "company": "Exologic",
+    "avatar": "",
+    "rating": 5,
+    "quote": "Andreina worked with us as a Web Developer for six months, consistently demonstrating professionalism, strong problem-solving skills, and a commitment to high-quality results. She took ownership of every task, tested her work across devices, and was a reliable, collaborative team member. I strongly recommend her."
+  }
+]

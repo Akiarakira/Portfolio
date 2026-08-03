@@ -1,0 +1,314 @@
+---
+import testimonialsData from "../data/testimonials.json";
+
+interface Testimonial {
+  name: string;
+  role?: string;
+  company?: string;
+  avatar?: string;
+  rating?: number;
+  quote: string;
+}
+
+const testimonials = testimonialsData as Testimonial[];
+
+const getInitials = (name: string) =>
+  name
+    .trim()
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((part) => part.charAt(0).toUpperCase())
+    .join("");
+
+const clampRating = (rating?: number) =>
+  Math.max(1, Math.min(5, Math.round(rating ?? 5)));
+---
+
+{
+  testimonials.length > 0 && (
+    <section id="testimonials" class="testimonials-section py-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="testimonials-chip">
+            <i class="fa-solid fa-heart" aria-hidden="true" />
+            Kind words
+          </span>
+          <h2 class="section-title text-center mt-4">Testimonials</h2>
+          <p class="testimonials-subtitle">
+            A few lovely things clients and teammates have said about working
+            with me.
+          </p>
+        </div>
+
+        <div class="testimonials-slider" data-testimonials-slider>
+          <div
+            class="testimonials-track"
+            data-testimonials-track
+            tabindex="0"
+            role="group"
+            aria-label="Testimonials carousel"
+          >
+            {testimonials.map((testimonial) => (
+              <figure class="testimonial-card">
+                <span class="testimonial-quote-mark" aria-hidden="true">
+                  &ldquo;
+                </span>
+
+                <div
+                  class="testimonial-stars"
+                  aria-label={`${clampRating(testimonial.rating)} out of 5 stars`}
+                >
+                  {Array.from({ length: clampRating(testimonial.rating) }).map(
+                    () => (
+                      <i class="fa-solid fa-star" aria-hidden="true" />
+                    ),
+                  )}
+                </div>
+
+                <blockquote class="testimonial-quote">
+                  {testimonial.quote}
+                </blockquote>
+
+                <figcaption class="testimonial-author">
+                  {testimonial.avatar ? (
+                    <img
+                      class="testimonial-avatar"
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <span class="testimonial-avatar testimonial-avatar-initials">
+                      {getInitials(testimonial.name)}
+                    </span>
+                  )}
+                  <span class="testimonial-author-meta">
+                    <span class="testimonial-name">{testimonial.name}</span>
+                    {(testimonial.role || testimonial.company) && (
+                      <span class="testimonial-role">
+                        {[testimonial.role, testimonial.company]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </span>
+                    )}
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          {testimonials.length > 1 && (
+            <div class="testimonials-controls">
+              <button
+                type="button"
+                class="testimonials-arrow"
+                data-testimonials-prev
+                aria-label="Previous testimonials"
+              >
+                <i class="fa-solid fa-arrow-left" aria-hidden="true" />
+              </button>
+
+              <div class="testimonials-dots" data-testimonials-dots />
+
+              <button
+                type="button"
+                class="testimonials-arrow"
+                data-testimonials-next
+                aria-label="Next testimonials"
+              >
+                <i class="fa-solid fa-arrow-right" aria-hidden="true" />
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<script>
+  const initTestimonialsSlider = (root: HTMLElement) => {
+    const track = root.querySelector<HTMLElement>("[data-testimonials-track]");
+    const dotsWrapper = root.querySelector<HTMLElement>(
+      "[data-testimonials-dots]",
+    );
+    const prevButton = root.querySelector<HTMLButtonElement>(
+      "[data-testimonials-prev]",
+    );
+    const nextButton = root.querySelector<HTMLButtonElement>(
+      "[data-testimonials-next]",
+    );
+
+    if (!track) return;
+
+    const slides = Array.from(
+      track.querySelectorAll<HTMLElement>(".testimonial-card"),
+    );
+
+    const total = slides.length;
+
+    if (total === 0) return;
+
+    if (total > 1) {
+      const before = document.createDocumentFragment();
+      const after = document.createDocumentFragment();
+
+      slides.forEach((slide) => {
+        const cloneBefore = slide.cloneNode(true) as HTMLElement;
+        const cloneAfter = slide.cloneNode(true) as HTMLElement;
+        [cloneBefore, cloneAfter].forEach((clone) => {
+          clone.dataset.clone = "true";
+          clone.setAttribute("aria-hidden", "true");
+        });
+        before.appendChild(cloneBefore);
+        after.appendChild(cloneAfter);
+      });
+
+      track.insertBefore(before, slides[0]);
+      track.appendChild(after);
+    }
+
+    const getStep = () => {
+      const cards = track.querySelectorAll<HTMLElement>(".testimonial-card");
+      if (cards.length < 2) return cards[0]?.offsetWidth ?? 0;
+      return cards[1].offsetLeft - cards[0].offsetLeft;
+    };
+
+    const getPerView = () => {
+      const step = getStep();
+      if (step <= 0) return 1;
+      return Math.max(1, Math.round(track.clientWidth / step));
+    };
+
+    const isLooping = () => total > 1 && getPerView() < total;
+
+    const getSetWidth = () => getStep() * total;
+
+    const getActiveIndex = () => {
+      const step = getStep();
+      if (step <= 0) return 0;
+      const raw = Math.round(track.scrollLeft / step);
+      return ((raw % total) + total) % total;
+    };
+
+    const scrollSilentlyTo = (left: number) => {
+      const previous = track.style.scrollBehavior;
+      track.style.scrollBehavior = "auto";
+      track.scrollLeft = left;
+      track.style.scrollBehavior = previous;
+    };
+
+    const recenter = () => {
+      if (!isLooping()) return;
+      const setWidth = getSetWidth();
+      if (setWidth <= 0) return;
+      const position = track.scrollLeft;
+      if (position < setWidth * 0.5) {
+        scrollSilentlyTo(position + setWidth);
+      } else if (position >= setWidth * 2) {
+        scrollSilentlyTo(position - setWidth);
+      }
+    };
+
+    const scrollByStep = (direction: number) => {
+      const step = getStep();
+      if (step <= 0) return;
+
+      if (!isLooping()) {
+        track.scrollBy({ left: direction * step, behavior: "smooth" });
+        return;
+      }
+
+      recenter();
+      track.scrollBy({ left: direction * step, behavior: "smooth" });
+    };
+
+    const goToIndex = (index: number) => {
+      const step = getStep();
+      if (step <= 0) return;
+
+      const active = getActiveIndex();
+      let delta = index - active;
+
+      if (isLooping()) {
+        if (delta > total / 2) delta -= total;
+        if (delta < -total / 2) delta += total;
+      }
+
+      if (delta === 0) return;
+      track.scrollBy({ left: delta * step, behavior: "smooth" });
+    };
+
+    const renderDots = () => {
+      if (!dotsWrapper) return;
+
+      if (dotsWrapper.children.length !== total) {
+        dotsWrapper.innerHTML = "";
+        for (let i = 0; i < total; i += 1) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "testimonials-dot";
+          dot.setAttribute("aria-label", `Go to testimonial ${i + 1}`);
+          dot.addEventListener("click", () => goToIndex(i));
+          dotsWrapper.appendChild(dot);
+        }
+      }
+
+      const active = getActiveIndex();
+      Array.from(dotsWrapper.children).forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === active);
+        dot.setAttribute("aria-current", i === active ? "true" : "false");
+      });
+    };
+
+    const syncState = () => {
+      root.classList.toggle("is-single-page", getPerView() >= total);
+      renderDots();
+    };
+
+    const resetPosition = () => {
+      if (isLooping()) {
+        scrollSilentlyTo(getSetWidth());
+      } else {
+        scrollSilentlyTo(0);
+      }
+      syncState();
+    };
+
+    prevButton?.addEventListener("click", () => scrollByStep(-1));
+    nextButton?.addEventListener("click", () => scrollByStep(1));
+
+    track.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        scrollByStep(1);
+      }
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        scrollByStep(-1);
+      }
+    });
+
+    let scrollTimeout: number | undefined;
+    track.addEventListener("scroll", () => {
+      window.clearTimeout(scrollTimeout);
+      scrollTimeout = window.setTimeout(() => {
+        recenter();
+        syncState();
+      }, 90);
+    });
+
+    let resizeTimeout: number | undefined;
+    window.addEventListener("resize", () => {
+      window.clearTimeout(resizeTimeout);
+      resizeTimeout = window.setTimeout(resetPosition, 120);
+    });
+
+    resetPosition();
+  };
+
+  document
+    .querySelectorAll<HTMLElement>("[data-testimonials-slider]")
+    .forEach(initTestimonialsSlider);
+</script>

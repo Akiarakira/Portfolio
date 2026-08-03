@@ -1,12 +1,106 @@
 ---
+const contactLinks = [
+  {
+    key: "whatsapp",
+    label: "WhatsApp",
+    hint: "Usually replies fast",
+    href: "https://wa.me/584246483492",
+    icon: "fa-brands fa-whatsapp",
+  },
+  {
+    key: "email",
+    label: "Email me",
+    hint: "Andreinadibrigida8@gmail.com",
+    href: "mailto:Andreinadibrigida8@gmail.com",
+    icon: "fa-regular fa-envelope",
+  },
+  {
+    key: "linkedin",
+    label: "LinkedIn",
+    hint: "Let's connect",
+    href: "https://www.linkedin.com/in/andreina-di-brigida",
+    icon: "fa-brands fa-linkedin-in",
+  },
+];
 ---
 
-<div class="contact-card fixed bottom-8 right-8 bg-white rounded-full shadow-elegant-lg p-6 z-40">
-    <div class="text-center">
-        <h4 class="contact-title-card text-sm font-semibold text-rose-dark mb-3">Contact Me!</h4>
-        <div class="flex gap-4 justify-center">
-            <a href="tel:+584246483492" aria-label="Phone Number" class="contact text-2xl text-rose-accent hover:text-rose-dark transition"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:Andreinadibrigida8@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" class="contact text-2xl text-rose-accent hover:text-rose-dark transition"><i class="fa-regular fa-envelope"></i></a>
-        </div>
+<div
+  class="contact-card fixed bottom-6 right-6 z-40"
+  x-data="{ open: false }"
+  @keydown.escape.window="open = false"
+  @click.outside="open = false"
+  @touchstart.outside="open = false"
+>
+  <div
+    class="contact-panel"
+    x-cloak
+    x-show="open"
+    x-transition:enter="contact-panel-enter"
+    x-transition:enter-start="contact-panel-enter-start"
+    x-transition:enter-end="contact-panel-enter-end"
+    x-transition:leave="contact-panel-leave"
+    x-transition:leave-start="contact-panel-enter-end"
+    x-transition:leave-end="contact-panel-enter-start"
+  >
+    <div class="contact-panel-header">
+      <span class="contact-panel-avatar" aria-hidden="true">
+        <i class="fa-solid fa-mug-hot"></i>
+      </span>
+      <span>
+        <span class="contact-panel-title">Let's chat!</span>
+        <span class="contact-panel-subtitle">
+          <span class="contact-card-status" aria-hidden="true"></span>
+          Available for new projects
+        </span>
+      </span>
     </div>
+
+    <ul class="contact-panel-list">
+      {
+        contactLinks.map((link) => (
+          <li>
+            <a
+              class={`contact-panel-link contact-panel-link-${link.key}`}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-panel-icon" aria-hidden="true">
+                <i class={link.icon} />
+              </span>
+              <span class="contact-panel-text">
+                <span class="contact-panel-label">{link.label}</span>
+                <span class="contact-panel-hint">{link.hint}</span>
+              </span>
+              <i
+                class="fa-solid fa-arrow-right contact-panel-arrow"
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="contact-panel-footer">
+      Made with <i class="fa-solid fa-heart"></i> in Venezuela
+    </p>
+  </div>
+
+  <button
+    type="button"
+    class="contact-toggle"
+    :class="open && 'is-open'"
+    :aria-expanded="open ? 'true' : 'false'"
+    aria-label="Open contact options"
+    @click="open = !open"
+  >
+    <span class="contact-toggle-ring" aria-hidden="true"></span>
+    <i
+      class="fa-solid fa-comment-dots contact-toggle-icon-open"
+      aria-hidden="true"></i>
+    <i class="fa-solid fa-xmark contact-toggle-icon-close" aria-hidden="true"
+    ></i>
+    <span class="contact-toggle-bubble" aria-hidden="true">Hi!</span>
+  </button>
 </div>

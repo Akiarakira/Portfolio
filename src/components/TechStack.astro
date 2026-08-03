@@ -1,22 +1,113 @@
 ---
 const technologies = [
-  { key: 'html', className: 'tech-html', label: 'HTML5' },
-  { key: 'css', className: 'tech-css', label: 'CSS3' },
-  { key: 'javascript', className: 'tech-javascript', label: 'JavaScript' },
-  { key: 'typescript', className: 'tech-typescript', label: 'TypeScript' },
-  { key: 'php', className: 'tech-php', label: 'PHP' },
-  { key: 'node', className: 'tech-node', label: 'Node.js' },
-  { key: 'react', className: 'tech-react', label: 'React' },
-  { key: 'tailwind', className: 'tech-tailwind', label: 'Tailwind CSS' },
-  { key: 'shopify', className: 'tech-shopify', label: 'Shopify' },
-  { key: 'wordpress', className: 'tech-wordpress', label: 'WordPress' },
-  { key: 'sass', className: 'tech-sass', label: 'Sass' },
-  { key: 'figma', className: 'tech-figma', label: 'Figma' },
-  { key: 'alpine', className: 'tech-alpine', label: 'Alpine.js' },
-  { key: 'htmx', className: 'tech-htmx', label: 'HTMX' },
-  { key: 'mysql', className: 'tech-mysql', label: 'MySQL' },
-  { key: 'mongodb', className: 'tech-mongodb', label: 'MongoDB' },
-  { key: 'hubspot', className: 'tech-hubspot', label: 'HubSpot' },
+  {
+    key: "html",
+    className: "tech-html",
+    label: "HTML5",
+    usage: "Semantic, accessible markup for landing pages and layouts.",
+  },
+  {
+    key: "css",
+    className: "tech-css",
+    label: "CSS3",
+    usage: "Responsive grids, animations and pixel-perfect designs.",
+  },
+  {
+    key: "javascript",
+    className: "tech-javascript",
+    label: "JavaScript",
+    usage: "Interactive UI, form validation and DOM-driven features.",
+  },
+  {
+    key: "typescript",
+    className: "tech-typescript",
+    label: "TypeScript",
+    usage: "Type-safe components and reliable app-wide refactors.",
+  },
+  {
+    key: "php",
+    className: "tech-php",
+    label: "PHP",
+    usage: "Custom WordPress plugins and server-side templating.",
+  },
+  {
+    key: "python",
+    className: "tech-python",
+    label: "Python",
+    usage: "Automation scripts and data-processing tasks.",
+  },
+  {
+    key: "node",
+    className: "tech-node",
+    label: "Node.js",
+    usage: "REST APIs with Express and build tooling.",
+  },
+  {
+    key: "react",
+    className: "tech-react",
+    label: "React",
+    usage: "Component-based SPAs with hooks and state management.",
+  },
+  {
+    key: "tailwind",
+    className: "tech-tailwind",
+    label: "Tailwind CSS",
+    usage: "Utility-first styling with consistent design tokens.",
+  },
+  {
+    key: "shopify",
+    className: "tech-shopify",
+    label: "Shopify",
+    usage: "Custom Liquid themes and storefront feature work.",
+  },
+  {
+    key: "wordpress",
+    className: "tech-wordpress",
+    label: "WordPress",
+    usage: "Figma-to-theme builds and Elementor customizations.",
+  },
+  {
+    key: "sass",
+    className: "tech-sass",
+    label: "Sass",
+    usage: "Scalable stylesheets with mixins, nesting and variables.",
+  },
+  {
+    key: "figma",
+    className: "tech-figma",
+    label: "Figma",
+    usage: "Translating high-fidelity mockups into live interfaces.",
+  },
+  {
+    key: "alpine",
+    className: "tech-alpine",
+    label: "Alpine.js",
+    usage: "Lightweight reactivity for menus, modals and toggles.",
+  },
+  {
+    key: "htmx",
+    className: "tech-htmx",
+    label: "HTMX",
+    usage: "Server-driven partial updates without heavy JS.",
+  },
+  {
+    key: "mysql",
+    className: "tech-mysql",
+    label: "MySQL",
+    usage: "Relational schemas and queries for content-driven apps.",
+  },
+  {
+    key: "mongodb",
+    className: "tech-mongodb",
+    label: "MongoDB",
+    usage: "Document storage for flexible, fast-changing data.",
+  },
+  {
+    key: "hubspot",
+    className: "tech-hubspot",
+    label: "HubSpot",
+    usage: "CRM integrations, landing pages and lead capture forms.",
+  },
 ];
 ---
 
@@ -25,12 +116,31 @@ const technologies = [
     <div class="tools-card">
       <div class="tools-chip">Tools &amp; Tech</div>
       <div class="tools-grid">
-        {technologies.map((tech) => (
-          <figure class="flex flex-col items-center text-center" aria-label={tech.label}>
-            <span class={`logoImg ${tech.className}`} role="img" aria-label={tech.label}></span>
-            <figcaption class="text-xs mt-2 font-semibold text-muted">{tech.label}</figcaption>
-          </figure>
-        ))}
+        {
+          technologies.map((tech) => (
+            <figure
+              class="tech-item flex flex-col items-center text-center"
+              tabindex="0"
+              aria-describedby={`tech-tip-${tech.key}`}
+            >
+              <span
+                class={`logoImg ${tech.className}`}
+                role="img"
+                aria-label={tech.label}
+              />
+              <figcaption class="text-xs mt-2 font-semibold text-muted">
+                {tech.label}
+              </figcaption>
+              <span
+                class="tech-tooltip"
+                id={`tech-tip-${tech.key}`}
+                role="tooltip"
+              >
+                {tech.usage}
+              </span>
+            </figure>
+          ))
+        }
       </div>
     </div>
   </div>
