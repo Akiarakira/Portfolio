@@ -4,7 +4,7 @@ const themeToggle = document.querySelector("#themeToggle");
 const bodyElement = document.querySelector("#body");
 
 if (themeToggle && bodyElement) {
-    const THEME_KEY = "theme";
+    const THEME_KEY = "portfolio-theme";
 
     function getPreferredTheme() {
         return localStorage.getItem(THEME_KEY) || "dark";
