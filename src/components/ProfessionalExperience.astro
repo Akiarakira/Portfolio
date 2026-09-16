@@ -1,280 +1,140 @@
+---
+const experiences = [
+  {
+    company: "A-TeamWork",
+    title: "Web Developer & Shopify Specialist",
+    period: "August 2025 – Present · Full-time",
+    side: "left",
+    bullets: [
+      "Engineered a custom Node.js/GraphQL CLI automation suite leveraging the Shopify Admin API for mass normalization and synchronization of 3,500+ products and 7,300+ variants, integrating dry-run workflows and traceability logs for zero-downtime production deployments.",
+      "Built a custom Shopify application using Shopify Devs APIs and GraphQL to automate complex product variant structuring and streamline catalog sync.",
+      "Led the end-to-end frontend redesign of a luxury jewelry e-commerce platform, translating Figma prototypes into pixel-perfect, accessible, mobile-first code.",
+      "Raised Lighthouse performance score by 47% on a legacy theme (38 → 56) through image compression, script optimization, and layout rendering fixes, with measurable gains in load time on mobile.",
+      "Conducted deep UX and performance audits using Lighthouse and PageSpeed Insights, implementing technical fixes that improved user retention and conversion rates (CRO).",
+      "Maintained, optimized, and managed multiple e-commerce websites built on Shopify and WordPress.",
+      "Collaborated closely with design and marketing teams to align technical builds with business conversion goals and brand strategy.",
+    ],
+    stack:
+      "Shopify, Liquid, Node.js, GraphQL, Shopify Admin API, CLI Automation, JavaScript, HTML5, CSS3, WordPress, Lighthouse, PageSpeed Insights, Figma",
+  },
+  {
+    company: "MBtek",
+    title: "Full-Stack Web Developer",
+    period: "August 2024 – February 2026 · Part-time",
+    side: "right",
+    bullets: [
+      "Developed and maintained Shopify e-commerce sites with advanced Liquid theme customization (Shopify 2.0).",
+      "Debugged and resolved complex theme-related issues to ensure seamless UX, reliable functionality, and responsive mobile shopping experiences.",
+      "Engineered System Builder, a complex logic-based questionnaire tool that automated product selection and bundling for HVAC systems, directly driving conversion growth.",
+      "Automated warranty certificate generation triggered by Shopify webhooks through a custom Node.js/Express API, Puppeteer PDF rendering, and HubSpot CRM integration.",
+      "Created a custom Frequently Bought Together snippet using JavaScript that dynamically recommended and bundled complementary products in cart to boost Average Order Value (AOV).",
+      "Built dynamic landing pages and Product Display Pages (PDP) using HTML, CSS, and JavaScript, focusing on visual quality and mobile performance.",
+      "Optimized front-end performance metrics and UI responsiveness to enhance the mobile shopping experience.",
+    ],
+    stack:
+      "HTML5, CSS3, JavaScript (ES6+), Shopify 2.0, Liquid, Node.js, Express.js, Puppeteer, HubSpot API, GraphQL, REST APIs",
+  },
+  {
+    company: "Exologic",
+    title: "Web Developer (Contractor)",
+    period:
+      "December 2024 – August 2025 · Part-time contract · Additional engagement: December 2025",
+    side: "left",
+    bullets: [
+      "Delivered client projects as an independent contractor, managing multiple concurrent priorities with a strong delivery focus.",
+      "Improved performance and code quality across projects using Lighthouse audits, web vitals checks, multi-device testing, and CRO principles.",
+      "Developed application UIs and features for Deliverate and Localchat (delivery app) using Tailwind CSS, DaisyUI, Alpine.js, and JavaScript.",
+      "Integrated real-time map visualization and tracking features for delivery management, plus custom admin and driver dashboards.",
+      "Developed and optimized responsive UI components for the company website using HTML, CSS, and Tailwind CSS.",
+      "Used Figma and Canva to prototype interactive interfaces before front-end implementation.",
+    ],
+    stack:
+      "HTML5, CSS3, JavaScript, React, Tailwind CSS, DaisyUI, Alpine.js, Node.js, MongoDB, Lighthouse, Figma, Canva",
+  },
+  {
+    company: "Top Of The Line VA",
+    title: "Web Developer",
+    period: "June 2023 – July 2024 · Full-time",
+    side: "right",
+    bullets: [
+      "Contributed to full-stack development of plugins and themes for the ProspectorWeb lead generation platform using PHP, TypeScript, HTMX, and Alpine.js.",
+      "Executed UI/UX redesigns, including Dark Mode, enhanced sidebar navigation, and messaging automation features (Drip Campaigns).",
+      "Configured and managed VPS servers, DNS settings, SSL certificates, and corporate business email services across multiple domains.",
+      "Designed high-converting landing pages for clients and events using WordPress, Elementor, and custom code.",
+      "Resolved critical domain, server, and third-party platform issues (GoHighLevel, HubSpot, AirTable).",
+    ],
+    stack:
+      "PHP, TypeScript, JavaScript, HTML5, CSS3, MySQL, WordPress, Alpine.js, HTMX, Redis, Sass, Elementor, AirTable, GoHighLevel, HubSpot, Canva, VPS Server Management",
+  },
+  {
+    company: "Seguros Catatumbo",
+    title: "Systems Analyst / Analyst II",
+    period: "June 2022 – December 2022 · Full-time",
+    side: "left",
+    bullets: [
+      "Led the redesign and restructuring of the corporate Intranet on WordPress to streamline internal organizational communication.",
+      "Updated and created PHP interface components to query and modify internal company records connected to an IBM iSeries database and MySQL.",
+    ],
+    stack:
+      "PHP, JavaScript, HTML5, CSS3, MySQL, WordPress, Elementor, SQL, IBM iSeries Database",
+  },
+  {
+    company: "Centro Clínico Paraíso",
+    title: "Biomedical Equipment Maintenance Engineer",
+    period: "January 2019 – March 2019 · Engineering internship",
+    side: "right",
+    bullets: [
+      "Performed technical diagnostics, calibration, and preventive/corrective maintenance on precision medical and biomedical electronic hardware.",
+      "Maintained detailed technical service logs and documentation ensuring equipment compliance.",
+    ],
+    stack:
+      "Electronic Maintenance, Equipment Calibration, Hardware Diagnostics, Automation",
+  },
+];
+---
+
 <section id="experience" class="experience-section py-20">
   <div class="max-w-5xl mx-auto px-4">
     <h2 class="section-title text-center mb-12">Professional Experience</h2>
-
     <div class="relative">
       <div class="pointer-events-none timeline-line-mobile md:hidden"></div>
       <div>
-        <!-- A-TeamWork (left) -->
-        <article class="timeline-item z-10 md:flex md:items-center py-8">
-          <div
-            class="absolute left-6 top-12 -translate-x-1/2 -translate-y-1/2 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
-          >
-            <div class="timeline-dot shadow-elegant"></div>
-          </div>
-
-          <div class="w-full pl-12 md:pl-0 md:w-1/2 md:pr-10 md:text-right">
-            <div class="flex items-baseline justify-between gap-4 mb-1">
-              <h3 class="subtitle-elegant mb-0">Web Developer – A-TeamWork</h3>
-              <p
-                class="text-xs font-semibold uppercase tracking-wide text-rose-accent whitespace-nowrap"
+        {
+          experiences.map((experience) => (
+            <article class="timeline-item z-10 md:flex md:items-center py-8">
+              <div class="absolute left-6 top-12 -translate-x-1/2 -translate-y-1/2 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+                <div class="timeline-dot shadow-elegant" />
+              </div>
+              <div
+                class:list={[
+                  "w-full",
+                  "pl-12",
+                  "md:w-1/2",
+                  experience.side === "left"
+                    ? "md:pl-0 md:pr-10 md:text-right"
+                    : "md:ml-auto md:pl-10",
+                ]}
               >
-                Aug 2025 – Present
-              </p>
-            </div>
-            <ul class="mt-1 space-y-1 text-gray-600 text-sm leading-relaxed">
-              <li>
-                Maintain, optimize, and improve multiple Shopify and WordPress
-                websites with a focus on performance, conversion, and
-                mobile-first UX.
-              </li>
-              <li>
-                Built a local Shopify data normalization app to clean and
-                standardize 3,500+ products and 7,300+ variants with
-                inconsistent catalog data.
-              </li>
-              <li>
-                Normalized product types with duplicate or inconsistent casing,
-                such as earrings/EARRINGS, into clean values such as Earrings to
-                improve catalog consistency.
-              </li>
-              <li>
-                Helped fix product data issues affecting storefront display,
-                filtering, and merchandising, including missing or incorrect
-                color values and other bulk catalog inconsistencies.
-              </li>
-              <li>
-                Developed high-conversion landing pages, product collections,
-                and front-end improvements aligned with design and marketing
-                goals.
-              </li>
-              <li>
-                Improved site loading speed by 47%, increasing Lighthouse
-                performance score from 38 to 56 through image compression,
-                script optimization, and layout rendering improvements.
-              </li>
-              <li>
-                Conducted UX and performance audits using Lighthouse and
-                PageSpeed Insights, implementing fixes to improve user flow and
-                retention.
-              </li>
-              <li>
-                Collaborated with design and marketing teams to align technical
-                execution with brand identity and conversion objectives.
-              </li>
-            </ul>
-            <p class="mt-2 text-xs text-gray-600">
-              <span class="font-semibold">Stack:</span> HTML, CSS, JavaScript, Shopify,
-              Liquid, WordPress, APIs, Lighthouse, PageSpeed Insights, Figma
-            </p>
-          </div>
-        </article>
-
-        <!-- MBtek (right) -->
-        <article class="timeline-item z-10 md:flex md:items-center py-8">
-          <div
-            class="absolute left-6 top-12 -translate-x-1/2 -translate-y-1/2 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
-          >
-            <div class="timeline-dot shadow-elegant"></div>
-          </div>
-
-          <div class="w-full pl-12 md:w-1/2 md:ml-auto md:pl-10">
-            <div class="flex items-baseline justify-between gap-4 mb-1">
-              <h3 class="subtitle-elegant mb-0">
-                Full-Stack Web Developer – MBtek
-              </h3>
-              <p
-                class="text-xs font-semibold uppercase tracking-wide text-rose-accent whitespace-nowrap"
-              >
-                Aug 2024 – Present
-              </p>
-            </div>
-            <ul class="mt-1 space-y-1 text-gray-600 text-sm leading-relaxed">
-              <li>
-                Developed and maintained Shopify e-commerce sites with advanced
-                theme customization using Liquid.
-              </li>
-              <li>
-                Debugged and resolved theme-related issues to ensure seamless
-                UX, reliable functionality, and responsive shopping experiences.
-              </li>
-              <li>
-                Engineered the System Builder, a complex logic-based
-                questionnaire that automatically selected and added HVAC system
-                products to the cart based on user needs.
-              </li>
-              <li>
-                Automated warranty certificate generation triggered by Shopify
-                webhooks through a custom Node.js/Express API, Puppeteer PDF
-                rendering, and HubSpot integration.
-              </li>
-              <li>
-                Created a custom Frequently Bought Together snippet that
-                dynamically displayed related products and added them to the
-                cart to improve cross-selling and engagement.
-              </li>
-              <li>
-                Built dynamic landing pages and product pages using HTML, CSS,
-                and JavaScript, focusing on visual quality and mobile
-                performance.
-              </li>
-              <li>
-                Optimized front-end performance metrics and UI responsiveness to
-                improve the mobile shopping experience.
-              </li>
-              <li>
-                Worked closely with design and marketing teams to implement new
-                features, landing pages, and campaign assets.
-              </li>
-            </ul>
-            <p class="mt-2 text-xs text-gray-600">
-              <span class="font-semibold">Stack:</span> HTML, CSS, JavaScript, Shopify,
-              Liquid, Node.js, Express.js, HubSpot, GraphQL, REST APIs, Puppeteer
-            </p>
-          </div>
-        </article>
-
-        <!-- Exologic (left) -->
-        <article class="timeline-item z-10 md:flex md:items-center py-8">
-          <div
-            class="absolute left-6 top-12 -translate-x-1/2 -translate-y-1/2 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
-          >
-            <div class="timeline-dot shadow-elegant"></div>
-          </div>
-
-          <div class="w-full pl-12 md:pl-0 md:w-1/2 md:pr-10 md:text-right">
-            <div class="flex items-baseline justify-between gap-4 mb-1">
-              <h3 class="subtitle-elegant mb-0">
-                Web Developer / Contractor – Exologic
-              </h3>
-              <p
-                class="text-xs font-semibold uppercase tracking-wide text-rose-accent whitespace-nowrap"
-              >
-                Dec 2024 – Aug 2025
-              </p>
-            </div>
-            <ul class="mt-1 space-y-1 text-gray-600 text-sm leading-relaxed">
-              <li>
-                Worked as a freelance contractor, managing multiple project
-                priorities with professionalism, adaptability, and a strong
-                delivery focus.
-              </li>
-              <li>
-                Improved performance and code quality across projects using
-                Lighthouse audits, web vitals checks, multi-device testing, and
-                CRO principles.
-              </li>
-              <li>
-                Developed application UIs and features for Deliverate and
-                Localchat using Tailwind CSS, DaisyUI, Alpine.js, and
-                JavaScript.
-              </li>
-              <li>
-                Integrated real-time map visualization for delivery tracking to
-                improve the user experience.
-              </li>
-              <li>
-                Developed and optimized responsive UI components for the company
-                website using HTML, CSS, and Tailwind CSS.
-              </li>
-              <li>
-                Used Figma and Canva to prototype interfaces before front-end
-                implementation.
-              </li>
-            </ul>
-            <p class="mt-2 text-xs text-gray-600">
-              <span class="font-semibold">Stack:</span> HTML, CSS, JavaScript, React,
-              Tailwind CSS, DaisyUI, MongoDB, Node.js, Alpine.js, Lighthouse, Figma,
-              Canva
-            </p>
-          </div>
-        </article>
-
-        <!-- Top Of The Line VA (right) -->
-        <article class="timeline-item z-10 md:flex md:items-center py-8">
-          <div
-            class="absolute left-6 top-12 -translate-x-1/2 -translate-y-1/2 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
-          >
-            <div class="timeline-dot shadow-elegant"></div>
-          </div>
-
-          <div class="w-full pl-12 md:w-1/2 md:ml-auto md:pl-10">
-            <div class="flex items-baseline justify-between gap-4 mb-1">
-              <h3 class="subtitle-elegant mb-0">
-                Web Developer – Top Of The Line VA
-              </h3>
-              <p
-                class="text-xs font-semibold uppercase tracking-wide text-rose-accent whitespace-nowrap"
-              >
-                Jun 2023 – Jun 2024
-              </p>
-            </div>
-            <ul class="mt-1 space-y-1 text-gray-600 text-sm leading-relaxed">
-              <li>
-                Developed and maintained the ProspectorWeb lead generation
-                platform using PHP, TypeScript, HTMX, and Alpine.js.
-              </li>
-              <li>
-                Contributed to UI/UX redesign work, including Dark Mode, sidebar
-                improvements, and messaging automation features.
-              </li>
-              <li>
-                Configured and managed VPS servers, DNS settings, and business
-                email services.
-              </li>
-              <li>
-                Designed custom landing pages for clients and events using
-                WordPress, Elementor, and other page builders.
-              </li>
-              <li>
-                Built and optimized messaging automation features to support
-                lead generation workflows.
-              </li>
-            </ul>
-            <p class="mt-2 text-xs text-gray-600">
-              <span class="font-semibold">Stack:</span> PHP, HTML, CSS, JavaScript,
-              TypeScript, MySQL, WordPress, Alpine.js, HTMX, Redis, Sass, Elementor,
-              AirTable, GoHighLevel, HubSpot, Canva
-            </p>
-          </div>
-        </article>
-
-        <!-- Seguros Catatumbo (left) -->
-        <article class="timeline-item z-10 md:flex md:items-center py-8">
-          <div
-            class="absolute left-6 top-12 -translate-x-1/2 -translate-y-1/2 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
-          >
-            <div class="timeline-dot shadow-elegant"></div>
-          </div>
-
-          <div class="w-full pl-12 md:pl-0 md:w-1/2 md:pr-10 md:text-right">
-            <div class="flex items-baseline justify-between gap-4 mb-1">
-              <h3 class="subtitle-elegant mb-0">
-                Analyst II – Seguros Catatumbo
-              </h3>
-              <p
-                class="text-xs font-semibold uppercase tracking-wide text-rose-accent whitespace-nowrap"
-              >
-                Jun 2022 – Dec 2022
-              </p>
-            </div>
-            <ul class="mt-1 space-y-1 text-gray-600 text-sm leading-relaxed">
-              <li>
-                Supported internal systems and operational workflows using PHP,
-                HTML, CSS, JavaScript, MySQL, WordPress, and IBM iSeries
-                database tools.
-              </li>
-              <li>
-                Worked with structured data and technical processes in a
-                business environment.
-              </li>
-            </ul>
-            <p class="mt-2 text-xs text-gray-600">
-              <span class="font-semibold">Stack:</span> PHP, HTML, CSS, JavaScript,
-              MySQL, WordPress, IBM iSeries Database
-            </p>
-          </div>
-        </article>
+                <div class="mb-3">
+                  <h3 class="subtitle-elegant mb-1">
+                    {experience.title} – {experience.company}
+                  </h3>
+                  <p class="text-xs font-semibold uppercase tracking-wide text-rose-accent leading-relaxed break-words">
+                    {experience.period}
+                  </p>
+                </div>
+                <ul class="mt-1 space-y-1 text-gray-600 text-sm leading-relaxed">
+                  {experience.bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+                <p class="mt-2 text-xs text-gray-600">
+                  <span class="font-semibold">Stack:</span> {experience.stack}
+                </p>
+              </div>
+            </article>
+          ))
+        }
       </div>
     </div>
   </div>

@@ -1,10 +1,28 @@
 ---
+import SeeMyWorkButton from "./SeeMyWorkButton.astro";
 
+interface Props {
+  showAll?: boolean;
+}
+
+const { showAll = false } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <section id="projects" class="workExperience-section py-20">
   <h2 class="section-title text-center">Projects</h2>
-  <section class="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <section
+    class:list={[
+      "projects-grid",
+      "container",
+      "mx-auto",
+      "grid",
+      "md:grid-cols-2",
+      "lg:grid-cols-3",
+      "gap-8",
+      { "projects-grid--all": showAll, "projects-grid--featured": !showAll },
+    ]}
+  >
     <div class="card-project focusspace" aria-label="FocusSpace" tabindex="0">
       <div class="card-project-thumbnail" aria-hidden="true"></div>
       <div class="mb-4">
@@ -546,4 +564,14 @@
       </div>
     </div>
   </section>
+  {
+    !showAll && (
+      <div class="mt-12 text-center">
+        <SeeMyWorkButton
+          href={`${baseUrl}projects`}
+          label="View All Projects"
+        />
+      </div>
+    )
+  }
 </section>

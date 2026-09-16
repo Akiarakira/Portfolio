@@ -1,5 +1,5 @@
 ---
-
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <header
@@ -23,44 +23,67 @@
     >
       <li>
         <a
-          href="#projects"
+          href={`${baseUrl}#projects`}
           class="text-rose-dark font-semibold hover:text-rose-accent transition"
-          >Projects</a>
+          >Projects</a
+        >
       </li>
       <li>
         <a
-          href="#experience"
+          href={`${baseUrl}#experience`}
           class="text-rose-dark font-semibold hover:text-rose-accent transition"
-          >Professional Experience</a>
+          >Professional Experience</a
+        >
       </li>
       <li>
         <a
-          href="#testimonials"
+          href={`${baseUrl}#testimonials`}
           class="text-rose-dark font-semibold hover:text-rose-accent transition"
-          >Testimonials</a>
+          >Testimonials</a
+        >
       </li>
       <!-- <li><a href="#personal-projects" class="text-rose-dark font-semibold hover:text-rose-accent transition">Personal Projects</a></li> -->
     </ul>
-    <div class="dark-mode-btns">
-      <label
-        class="relative inline-flex items-center cursor-pointer select-none"
-        aria-label="Toggle dark mode"
+    <div class="flex items-center gap-4">
+      <div
+        class="language-switcher flex items-center gap-2"
+        aria-label="Language selector"
       >
-        <input id="themeToggle" type="checkbox" class="sr-only peer" />
-        <span
-          class="relative w-14 h-8 rounded-full border border-rose-light bg-surface-2 shadow-sm transition-colors peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-rose-accent/40 peer-checked:bg-surface"
+        <button
+          type="button"
+          class="language-option text-xs font-semibold"
+          data-language="en"
+          aria-pressed="true">EN</button
         >
+        <span class="text-xs text-muted" aria-hidden="true">/</span>
+        <button
+          type="button"
+          class="language-option text-xs font-semibold"
+          data-language="es"
+          aria-pressed="false">ES</button
+        >
+      </div>
+      <div class="dark-mode-btns">
+        <label
+          class="relative inline-flex items-center cursor-pointer select-none"
+          aria-label="Toggle dark mode"
+        >
+          <input id="themeToggle" type="checkbox" class="sr-only peer" />
           <span
-            class="absolute inset-0 flex items-center justify-between px-2 text-rose-accent"
+            class="relative w-14 h-8 rounded-full border border-rose-light bg-surface-2 shadow-sm transition-colors peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-rose-accent/40 peer-checked:bg-surface"
           >
-            <i class="fa-solid fa-sun text-sm"></i>
-            <i class="fa-solid fa-moon text-sm"></i>
+            <span
+              class="absolute inset-0 flex items-center justify-between px-2 text-rose-accent"
+            >
+              <i class="fa-solid fa-sun text-sm"></i>
+              <i class="fa-solid fa-moon text-sm"></i>
+            </span>
           </span>
-        </span>
-        <span
-          class="absolute left-1 top-1 h-6 w-6 rounded-full bg-cream shadow-md transition-transform peer-checked:translate-x-6"
-        ></span>
-      </label>
+          <span
+            class="absolute left-1 top-1 h-6 w-6 rounded-full bg-cream shadow-md transition-transform peer-checked:translate-x-6"
+          ></span>
+        </label>
+      </div>
     </div>
   </section>
 </header>

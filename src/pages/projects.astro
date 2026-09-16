@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import WorkExperience from "../components/WorkExperience.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Projects - Andreina Di Brigida"
+  description="Explore the full portfolio of projects by Andreina Di Brigida."
+>
+  <Header />
+  <main class="main-container max-w-7xl mx-auto px-4">
+    <WorkExperience showAll={true} />
+  </main>
+  <Footer />
+</Layout>
