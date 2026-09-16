@@ -9,8 +9,8 @@ import sitemap from '@astrojs/sitemap';
 
 import robotsTxt from 'astro-robots-txt';
 
-const site = process.env.SITE || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined);
-const base = process.env.BASE || '/';
+const site = process.env.SITE || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://akiarakira.github.io/Portfolio');
+const base = process.env.BASE || '/Portfolio/';
 
 // https://astro.build/config
 export default defineConfig({

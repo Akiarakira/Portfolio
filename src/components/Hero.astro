@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import heroImage from "../assets/me/Akiara-hero.png";
 import SeeMyWorkButton from "./SeeMyWorkButton.astro";
 
@@ -41,8 +42,8 @@ const baseUrl = import.meta.env.BASE_URL;
       </div>
     </div>
     <div class="hero-image-wrapper">
-      <img
-        src={heroImage.src}
+      <Image
+        src={heroImage}
         alt="Andreina Di Brigida"
         class="hero-image"
         loading="eager"
@@ -53,6 +54,10 @@ const baseUrl = import.meta.env.BASE_URL;
 </section>
 
 <style>
+  #main_title {
+    min-height: 1.2em;
+  }
+
   .hero-image-wrapper {
     position: relative;
     display: flex;

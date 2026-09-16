@@ -660,6 +660,11 @@
   display: block;
 }
 
+.card-project {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 30rem;
+}
+
 .lightMode .card-project {
   position: relative;
   border-radius: 1rem;

@@ -5,7 +5,10 @@
 <div id="tsparticles" class="absolute inset-0 z-0 pointer-events-none"></div>
 
 <script>
-  if (typeof window !== "undefined") {
+  if (
+    typeof window !== "undefined" &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
     async function initParticles() {
       const [{ tsParticles }, { loadSlim }] = await Promise.all([
         import("@tsparticles/engine"),
@@ -24,7 +27,7 @@
               speed: 0.85,
             },
             number: {
-              value: 84,
+              value: 36,
             },
             opacity: {
               value: {
@@ -68,6 +71,18 @@
       });
     }
 
-    initParticles();
+    const startParticles = () => {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(() => initParticles(), { timeout: 2000 });
+      } else {
+        window.setTimeout(initParticles, 1200);
+      }
+    };
+
+    if (document.readyState === "complete") {
+      startParticles();
+    } else {
+      window.addEventListener("load", startParticles, { once: true });
+    }
   }
 </script>
