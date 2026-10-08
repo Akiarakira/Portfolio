@@ -21,10 +21,10 @@ const canonicalUrl = Astro.site
   : undefined;
 const ogImageUrl = Astro.site
   ? new URL(
-      `${baseUrl}${baseUrl.endsWith("/") ? "" : "/"}img/photo.jpg`,
+      `${baseUrl}${baseUrl.endsWith("/") ? "" : "/"}img/banner-social.png`,
       Astro.site,
     ).toString()
-  : `${baseUrl}${baseUrl.endsWith("/") ? "" : "/"}img/photo.jpg`;
+  : `${baseUrl}${baseUrl.endsWith("/") ? "" : "/"}img/banner-social.png`;
 
 const personSchema = {
   "@context": "https://schema.org",
