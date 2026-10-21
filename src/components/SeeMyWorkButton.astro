@@ -1,4 +1,6 @@
 ---
+import Icon from "./Icon.astro";
+
 interface Props {
   href: string;
   label?: string;
@@ -9,7 +11,7 @@ const { href, label = "See My Work" } = Astro.props;
 
 <a href={href} class="btn-secondary btn-secondary-stars inline-block">
   <span class="btn-secondary-stars__label">
-    <i class="fa-solid fa-arrow-down"></i>
+    <Icon name="fa6-solid:arrow-down" />
     <span>{label}</span>
   </span>
   {

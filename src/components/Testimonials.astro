@@ -1,5 +1,6 @@
 ---
 import testimonialsData from "../data/testimonials.json";
+import Icon from "./Icon.astro";
 
 interface Testimonial {
   name: string;
@@ -30,7 +31,7 @@ const clampRating = (rating?: number) =>
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-12">
           <span class="testimonials-chip">
-            <i class="fa-solid fa-heart" aria-hidden="true" />
+            <Icon name="fa6-solid:heart" />
             Kind words
           </span>
           <h2 class="section-title text-center mt-4">Testimonials</h2>
@@ -61,7 +62,7 @@ const clampRating = (rating?: number) =>
                 >
                   {Array.from({ length: clampRating(testimonial.rating) }).map(
                     () => (
-                      <i class="fa-solid fa-star" aria-hidden="true" />
+                      <Icon name="fa6-solid:star" />
                     ),
                   )}
                 </div>
@@ -107,7 +108,7 @@ const clampRating = (rating?: number) =>
                 data-testimonials-prev
                 aria-label="Previous testimonials"
               >
-                <i class="fa-solid fa-arrow-left" aria-hidden="true" />
+                <Icon name="fa6-solid:arrow-left" />
               </button>
 
               <div class="testimonials-dots" data-testimonials-dots />
@@ -118,7 +119,7 @@ const clampRating = (rating?: number) =>
                 data-testimonials-next
                 aria-label="Next testimonials"
               >
-                <i class="fa-solid fa-arrow-right" aria-hidden="true" />
+                <Icon name="fa6-solid:arrow-right" />
               </button>
             </div>
           )}

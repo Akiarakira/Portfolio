@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Icon from "./Icon.astro";
 import heroImage from "../assets/me/Akiara-hero.png";
 import SeeMyWorkButton from "./SeeMyWorkButton.astro";
 
@@ -36,7 +37,7 @@ const baseUrl = import.meta.env.BASE_URL;
           rel="noopener noreferrer"
           class="btn-primary inline-block"
         >
-          <i class="fa-solid fa-download mr-2"></i>Download CV
+          <Icon name="fa6-solid:download" class="mr-2" />Download CV
         </a>
         <SeeMyWorkButton href="#projects" />
       </div>

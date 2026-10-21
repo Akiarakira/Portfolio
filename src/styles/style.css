@@ -331,7 +331,7 @@
   opacity: 0.7;
 }
 
-.contact-panel-footer i {
+.contact-panel-footer svg {
   color: var(--color-pink);
 }
 
@@ -507,7 +507,14 @@
   gap: 0.55rem;
 }
 
-.btn-secondary-stars svg {
+.btn-secondary-stars__label svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.btn-secondary-stars > [class^="star-"] svg {
   display: block;
   width: 100%;
   height: auto;
@@ -1298,15 +1305,6 @@
   width: 3.5rem;
   height: 3.5rem;
   display: inline-block;
-  background-image: linear-gradient(135deg, #fb7185, #f472b6, #a855f7, #22d3ee);
-  background-size: 200% 200%;
-  animation: tools-gradient 6s ease-in-out infinite;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
   filter: drop-shadow(0 10px 16px rgba(15, 23, 42, 0.45));
   transition:
     transform 150ms ease-out,
@@ -1459,107 +1457,77 @@
   }
 }
 
-@keyframes tools-gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Iconify masks (fill with gradient) */
+/* Technology icon colors */
 .tools-section .tech-html {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:html5.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:html5.svg");
+  color: #e34f26;
 }
 
 .tools-section .tech-css {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:css3.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:css3.svg");
+  color: #1572b6;
 }
 
 .tools-section .tech-javascript {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:javascript.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:javascript.svg");
+  color: #f7df1e;
 }
 
 .tools-section .tech-typescript {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:typescript.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:typescript.svg");
+  color: #3178c6;
 }
 
 .tools-section .tech-php {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:php.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:php.svg");
+  color: #777bb4;
 }
 
 .tools-section .tech-python {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:python.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:python.svg");
+  color: #3776ab;
 }
 
 .tools-section .tech-node {
-  -webkit-mask-image: url("https://api.iconify.design/logos:nodejs-icon.svg");
-  mask-image: url("https://api.iconify.design/logos:nodejs-icon.svg");
+  color: #5fa04e;
 }
 
 .tools-section .tech-react {
-  -webkit-mask-image: url("https://api.iconify.design/logos:react.svg");
-  mask-image: url("https://api.iconify.design/logos:react.svg");
+  color: #61dafb;
 }
 
 .tools-section .tech-tailwind {
-  -webkit-mask-image: url("https://api.iconify.design/logos:tailwindcss-icon.svg");
-  mask-image: url("https://api.iconify.design/logos:tailwindcss-icon.svg");
+  color: #06b6d4;
 }
 
 .tools-section .tech-shopify {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:shopify.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:shopify.svg");
+  color: #7ab55c;
 }
 
 .tools-section .tech-wordpress {
-  -webkit-mask-image: url("https://api.iconify.design/logos:wordpress-icon.svg");
-  mask-image: url("https://api.iconify.design/logos:wordpress-icon.svg");
+  color: #21759b;
 }
 
 .tools-section .tech-sass {
-  -webkit-mask-image: url("https://api.iconify.design/logos:sass.svg");
-  mask-image: url("https://api.iconify.design/logos:sass.svg");
+  color: #cc6699;
 }
 
 .tools-section .tech-figma {
-  -webkit-mask-image: url("https://api.iconify.design/logos:figma.svg");
-  mask-image: url("https://api.iconify.design/logos:figma.svg");
+  color: #f24e1e;
 }
 
 .tools-section .tech-alpine {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:alpinedotjs.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:alpinedotjs.svg");
+  color: #77c1d2;
 }
 
 .tools-section .tech-htmx {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:htmx.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:htmx.svg");
+  color: #3366cc;
 }
 
 .tools-section .tech-mysql {
-  -webkit-mask-image: url("https://api.iconify.design/logos:mysql-icon.svg");
-  mask-image: url("https://api.iconify.design/logos:mysql-icon.svg");
+  color: #4479a1;
 }
 
 .tools-section .tech-mongodb {
-  -webkit-mask-image: url("https://api.iconify.design/logos:mongodb-icon.svg");
-  mask-image: url("https://api.iconify.design/logos:mongodb-icon.svg");
+  color: #47a248;
 }
 
 .tools-section .tech-hubspot {
-  -webkit-mask-image: url("https://api.iconify.design/simple-icons:hubspot.svg");
-  mask-image: url("https://api.iconify.design/simple-icons:hubspot.svg");
+  color: #ff7a59;
 }
 
 @media (max-width: 640px) {

@@ -1,27 +1,29 @@
 ---
+import Icon from "./Icon.astro";
+
 const contactLinks = [
   {
     key: "whatsapp",
     label: "WhatsApp",
     hint: "Usually replies fast",
     href: "https://wa.me/584246483492",
-    icon: "fa-brands fa-whatsapp",
+    icon: "fa6-brands:whatsapp",
   },
   {
     key: "email",
     label: "Email me",
     hint: "Andreinadibrigida8@gmail.com",
     href: "mailto:Andreinadibrigida8@gmail.com",
-    icon: "fa-regular fa-envelope",
+    icon: "fa6-regular:envelope",
   },
   {
     key: "linkedin",
     label: "LinkedIn",
     hint: "Let's connect",
     href: "https://www.linkedin.com/in/andreina-di-brigida",
-    icon: "fa-brands fa-linkedin-in",
+    icon: "fa6-brands:linkedin-in",
   },
-];
+] as const;
 ---
 
 <div
@@ -44,7 +46,7 @@ const contactLinks = [
   >
     <div class="contact-panel-header">
       <span class="contact-panel-avatar" aria-hidden="true">
-        <i class="fa-solid fa-mug-hot"></i>
+        <Icon name="fa6-solid:mug-hot" />
       </span>
       <span>
         <span class="contact-panel-title">Let's chat!</span>
@@ -66,15 +68,15 @@ const contactLinks = [
               rel="noopener noreferrer"
             >
               <span class="contact-panel-icon" aria-hidden="true">
-                <i class={link.icon} />
+                <Icon name={link.icon} />
               </span>
               <span class="contact-panel-text">
                 <span class="contact-panel-label">{link.label}</span>
                 <span class="contact-panel-hint">{link.hint}</span>
               </span>
-              <i
-                class="fa-solid fa-arrow-right contact-panel-arrow"
-                aria-hidden="true"
+              <Icon
+                name="fa6-solid:arrow-right"
+                class="contact-panel-arrow"
               />
             </a>
           </li>
@@ -83,7 +85,7 @@ const contactLinks = [
     </ul>
 
     <p class="contact-panel-footer">
-      Made with <i class="fa-solid fa-heart"></i> in Venezuela
+      Made with <Icon name="fa6-solid:heart" /> in Venezuela
     </p>
   </div>
 
@@ -96,11 +98,14 @@ const contactLinks = [
     @click="open = !open"
   >
     <span class="contact-toggle-ring" aria-hidden="true"></span>
-    <i
-      class="fa-solid fa-comment-dots contact-toggle-icon-open"
-      aria-hidden="true"></i>
-    <i class="fa-solid fa-xmark contact-toggle-icon-close" aria-hidden="true"
-    ></i>
+    <Icon
+      name="fa6-solid:comment-dots"
+      class="contact-toggle-icon-open"
+    />
+    <Icon
+      name="fa6-solid:xmark"
+      class="contact-toggle-icon-close"
+    />
     <span class="contact-toggle-bubble" aria-hidden="true">Hi!</span>
   </button>
 </div>

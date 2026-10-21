@@ -8,6 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 import robotsTxt from 'astro-robots-txt';
+import Icons from 'unplugin-icons/vite';
 
 const site = process.env.SITE || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://akiarakira.github.io/Portfolio');
 const base = process.env.BASE || '/Portfolio/';
@@ -23,6 +24,6 @@ export default defineConfig({
   })],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [Icons({ compiler: 'astro' }), tailwindcss()]
   }
 });
