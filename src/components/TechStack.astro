@@ -1,130 +1,112 @@
 ---
-import Icon from "./Icon.astro";
+import TechIcon from "./TechIcon.astro";
 
 const technologies = [
   {
     key: "html",
-    className: "tech-html",
-    icon: "simple-icons:html5",
+    icon: "html5",
     label: "HTML5",
     usage: "Semantic, accessible markup for landing pages and layouts.",
   },
   {
     key: "css",
-    className: "tech-css",
-    icon: "simple-icons:css3",
+    icon: "css3",
     label: "CSS3",
     usage: "Responsive grids, animations and pixel-perfect designs.",
   },
   {
     key: "javascript",
-    className: "tech-javascript",
-    icon: "simple-icons:javascript",
+    icon: "javascript",
     label: "JavaScript",
     usage: "Interactive UI, form validation and DOM-driven features.",
   },
   {
     key: "typescript",
-    className: "tech-typescript",
-    icon: "simple-icons:typescript",
+    icon: "typescript",
     label: "TypeScript",
     usage: "Type-safe components and reliable app-wide refactors.",
   },
   {
     key: "php",
-    className: "tech-php",
-    icon: "simple-icons:php",
+    icon: "php",
     label: "PHP",
     usage: "Custom WordPress plugins and server-side templating.",
   },
   {
     key: "python",
-    className: "tech-python",
-    icon: "simple-icons:python",
+    icon: "python",
     label: "Python",
     usage: "Automation scripts and data-processing tasks.",
   },
   {
     key: "node",
-    className: "tech-node",
-    icon: "simple-icons:nodedotjs",
+    icon: "nodedotjs",
     label: "Node.js",
     usage: "REST APIs with Express and build tooling.",
   },
   {
     key: "react",
-    className: "tech-react",
-    icon: "simple-icons:react",
+    icon: "react",
     label: "React",
     usage: "Component-based SPAs with hooks and state management.",
   },
   {
     key: "tailwind",
-    className: "tech-tailwind",
-    icon: "simple-icons:tailwindcss",
+    icon: "tailwindcss",
     label: "Tailwind CSS",
     usage: "Utility-first styling with consistent design tokens.",
   },
   {
     key: "shopify",
-    className: "tech-shopify",
-    icon: "simple-icons:shopify",
+    icon: "shopify",
     label: "Shopify",
     usage: "Custom Liquid themes and storefront feature work.",
   },
   {
     key: "wordpress",
-    className: "tech-wordpress",
-    icon: "simple-icons:wordpress",
+    icon: "wordpress",
     label: "WordPress",
     usage: "Figma-to-theme builds and Elementor customizations.",
   },
   {
     key: "sass",
-    className: "tech-sass",
-    icon: "simple-icons:sass",
+    icon: "sass",
     label: "Sass",
     usage: "Scalable stylesheets with mixins, nesting and variables.",
   },
   {
     key: "figma",
-    className: "tech-figma",
-    icon: "simple-icons:figma",
+    icon: "figma",
     label: "Figma",
     usage: "Translating high-fidelity mockups into live interfaces.",
   },
   {
     key: "alpine",
-    className: "tech-alpine",
-    icon: "simple-icons:alpinedotjs",
+    icon: "alpinedotjs",
     label: "Alpine.js",
     usage: "Lightweight reactivity for menus, modals and toggles.",
   },
   {
     key: "htmx",
-    className: "tech-htmx",
-    icon: "simple-icons:htmx",
+    icon: "htmx",
     label: "HTMX",
     usage: "Server-driven partial updates without heavy JS.",
   },
   {
     key: "mysql",
-    className: "tech-mysql",
-    icon: "simple-icons:mysql",
+    icon: "mysql",
     label: "MySQL",
     usage: "Relational schemas and queries for content-driven apps.",
   },
   {
     key: "mongodb",
-    className: "tech-mongodb",
-    icon: "simple-icons:mongodb",
+    icon: "mongodb",
     label: "MongoDB",
     usage: "Document storage for flexible, fast-changing data.",
   },
   {
     key: "hubspot",
-    className: "tech-hubspot",
-    icon: "simple-icons:hubspot",
+    icon: "hubspot",
     label: "HubSpot",
     usage: "CRM integrations, landing pages and lead capture forms.",
   },
@@ -143,10 +125,9 @@ const technologies = [
               tabindex="0"
               aria-describedby={`tech-tip-${tech.key}`}
             >
-              <Icon
+              <TechIcon
                 name={tech.icon}
-                class={`logoImg ${tech.className}`}
-                ariaLabel={tech.label}
+                label={tech.label}
               />
               <figcaption class="text-xs mt-2 font-semibold text-muted">
                 {tech.label}

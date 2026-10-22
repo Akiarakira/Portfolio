@@ -1,0 +1,43 @@
+---
+import simpleIcons from "@iconify-json/simple-icons/icons.json";
+
+const icons = {
+  alpinedotjs: simpleIcons.icons.alpinedotjs.body,
+  css3: simpleIcons.icons.css3.body,
+  figma: simpleIcons.icons.figma.body,
+  htmx: simpleIcons.icons.htmx.body,
+  hubspot: simpleIcons.icons.hubspot.body,
+  html5: simpleIcons.icons.html5.body,
+  javascript: simpleIcons.icons.javascript.body,
+  mongodb: simpleIcons.icons.mongodb.body,
+  mysql: simpleIcons.icons.mysql.body,
+  nodedotjs: simpleIcons.icons.nodedotjs.body,
+  php: simpleIcons.icons.php.body,
+  python: simpleIcons.icons.python.body,
+  react: simpleIcons.icons.react.body,
+  sass: simpleIcons.icons.sass.body,
+  shopify: simpleIcons.icons.shopify.body,
+  tailwindcss: simpleIcons.icons.tailwindcss.body,
+  typescript: simpleIcons.icons.typescript.body,
+  wordpress: simpleIcons.icons.wordpress.body,
+};
+
+type IconName = keyof typeof icons;
+
+interface Props {
+  name: IconName;
+  class?: string;
+  label: string;
+}
+
+const { name, class: className, label } = Astro.props;
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">${icons[name].replaceAll("currentColor", "#000")}</svg>`;
+const mask = `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+---
+
+<span
+  class={`logoImg ${className ?? ""}`}
+  style={`--tech-icon-mask: ${mask}`}
+  role="img"
+  aria-label={label}
+/>

@@ -1305,6 +1305,17 @@
   width: 3.5rem;
   height: 3.5rem;
   display: inline-block;
+  background-image: linear-gradient(135deg, #fb7185, #f472b6, #a855f7, #22d3ee);
+  background-size: 200% 200%;
+  animation: tools-gradient 6s ease-in-out infinite;
+  -webkit-mask-image: var(--tech-icon-mask);
+  mask-image: var(--tech-icon-mask);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
   filter: drop-shadow(0 10px 16px rgba(15, 23, 42, 0.45));
   transition:
     transform 150ms ease-out,
@@ -1457,77 +1468,16 @@
   }
 }
 
-/* Technology icon colors */
-.tools-section .tech-html {
-  color: #e34f26;
-}
-
-.tools-section .tech-css {
-  color: #1572b6;
-}
-
-.tools-section .tech-javascript {
-  color: #f7df1e;
-}
-
-.tools-section .tech-typescript {
-  color: #3178c6;
-}
-
-.tools-section .tech-php {
-  color: #777bb4;
-}
-
-.tools-section .tech-python {
-  color: #3776ab;
-}
-
-.tools-section .tech-node {
-  color: #5fa04e;
-}
-
-.tools-section .tech-react {
-  color: #61dafb;
-}
-
-.tools-section .tech-tailwind {
-  color: #06b6d4;
-}
-
-.tools-section .tech-shopify {
-  color: #7ab55c;
-}
-
-.tools-section .tech-wordpress {
-  color: #21759b;
-}
-
-.tools-section .tech-sass {
-  color: #cc6699;
-}
-
-.tools-section .tech-figma {
-  color: #f24e1e;
-}
-
-.tools-section .tech-alpine {
-  color: #77c1d2;
-}
-
-.tools-section .tech-htmx {
-  color: #3366cc;
-}
-
-.tools-section .tech-mysql {
-  color: #4479a1;
-}
-
-.tools-section .tech-mongodb {
-  color: #47a248;
-}
-
-.tools-section .tech-hubspot {
-  color: #ff7a59;
+@keyframes tools-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media (max-width: 640px) {
