@@ -5,7 +5,8 @@
     "company": "mbtek",
     "avatar": "",
     "rating": 5,
-    "quote": "If you're looking for someone who really makes things happen, that's Andreina. She has great attention to detail and handles multiple projects at once, always delivering on time. I would work with her a thousand times more without hesitation. Excellent programmer!"
+    "quote": "If you're looking for someone who really makes things happen, that's Andreina. She has great attention to detail and handles multiple projects at once, always delivering on time. I would work with her a thousand times more without hesitation. Excellent programmer!",
+    "quoteEs": "Si buscas a alguien que realmente haga que las cosas pasen, esa es Andreina. Tiene gran atención al detalle y maneja múltiples proyectos a la vez, siempre entregando a tiempo. Trabajaría con ella mil veces más sin dudarlo. ¡Excelente programadora!"
   },
   {
     "name": "Juliana González",
@@ -13,7 +14,8 @@
     "company": "A Teamwork",
     "avatar": "",
     "rating": 5,
-    "quote": "Andreina was a key contributor on my development team, moving confidently across full-code, WordPress, and Webflow projects. She adapts technically, learns fast, and always seeks to fully understand a problem before proposing solutions. A positive, committed teammate I highly recommend."
+    "quote": "Andreina was a key contributor on my development team, moving confidently across full-code, WordPress, and Webflow projects. She adapts technically, learns fast, and always seeks to fully understand a problem before proposing solutions. A positive, committed teammate I highly recommend.",
+    "quoteEs": "Andreina fue una pieza clave en mi equipo de desarrollo, moviéndose con confianza entre proyectos de código puro, WordPress y Webflow. Se adapta técnicamente, aprende rápido y siempre busca entender a fondo un problema antes de proponer soluciones. Una compañera positiva y comprometida que recomiendo ampliamente."
   },
   {
     "name": "Wilfredo Borras",
@@ -21,7 +23,8 @@
     "company": "A Teamwork",
     "avatar": "",
     "rating": 5,
-    "quote": "Andreina was an absolute lifesaver across several marketing campaigns, building high-converting, flawless websites at lightning speed even under intense launch pressure. Her ability to deliver perfect work on tight timelines completely optimized our workflow."
+    "quote": "Andreina was an absolute lifesaver across several marketing campaigns, building high-converting, flawless websites at lightning speed even under intense launch pressure. Her ability to deliver perfect work on tight timelines completely optimized our workflow.",
+    "quoteEs": "Andreina fue una verdadera salvavidas en varias campañas de marketing, construyendo sitios web impecables y de alta conversión a una velocidad increíble, incluso bajo la intensa presión de los lanzamientos. Su capacidad de entregar trabajo perfecto en plazos ajustados optimizó por completo nuestro flujo de trabajo."
   },
   {
     "name": "Jose Oroño",
@@ -29,7 +32,8 @@
     "company": "Exologic",
     "avatar": "",
     "rating": 5,
-    "quote": "Andreina worked with us as a Web Developer for six months, consistently demonstrating professionalism, strong problem-solving skills, and a commitment to high-quality results. She took ownership of every task, tested her work across devices, and was a reliable, collaborative team member. I strongly recommend her."
+    "quote": "Andreina worked with us as a Web Developer for six months, consistently demonstrating professionalism, strong problem-solving skills, and a commitment to high-quality results. She took ownership of every task, tested her work across devices, and was a reliable, collaborative team member. I strongly recommend her.",
+    "quoteEs": "Andreina trabajó con nosotros como Desarrolladora Web durante seis meses, demostrando constantemente profesionalismo, gran capacidad para resolver problemas y compromiso con resultados de alta calidad. Se hizo cargo de cada tarea, probó su trabajo en distintos dispositivos y fue una integrante del equipo confiable y colaborativa. La recomiendo firmemente."
   },
   {
     "name": "Maria de los Angeles Battistella",
@@ -40,5 +44,15 @@
     "rating": 5,
     "quote": "I’m glad to recommend Andreina. She adapts quickly, learns new technologies, and builds apps that integrate with websites to improve UGC and customer experience. She understands problems before proposing solutions, delivers polished work, and anticipates challenges. Reliable, committed, and positive, she would be an asset to any team.",
     "quoteEs": "Recomiendo a Andreina. Se adapta rápido, aprende tecnologías nuevas y crea apps conectadas con sitios web que potencian el UGC y la experiencia del cliente. Entiende los problemas antes de proponer soluciones, entrega trabajo prolijo y anticipa desafíos. Es confiable, comprometida y una presencia positiva en el equipo."
+  },
+  {
+    "name": "Sarah Sofia Campos O.",
+    "profile": "https://www.linkedin.com/in/sarahsofiacamposoropeza/",
+    "role": "Operations & Business Development Leader",
+    "company": "Morales Solutions",
+    "avatar": "",
+    "rating": 5,
+    "quote": "Working with Andreina has been an incredible experience. She helped us build and integrate custom Shopify apps into dynamic dashboards, and fully optimized the Morales Solutions website in under two weeks. Flawless technical execution (Node.js, GraphQL, Liquid) with great attention to detail and performance — a results-driven professional I highly recommend.",
+    "quoteEs": "Trabajar con Andreina ha sido una experiencia increíble. Nos ayudó a crear e integrar apps personalizadas de Shopify en dashboards dinámicos, y optimizó por completo el sitio web de Morales Solutions en menos de dos semanas. Ejecución técnica impecable (Node.js, GraphQL, Liquid) con gran atención al detalle y al rendimiento — una profesional orientada a resultados que recomiendo ampliamente."
   }
 ]
