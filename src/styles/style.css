@@ -836,6 +836,18 @@
   background-image: url("../assets/projects/ana-verdugo.png");
 }
 
+.card-project.bripco .card-project-thumbnail {
+  background-image: url("../assets/projects/bripco-thumb.webp");
+}
+
+.card-project.easyvcard .card-project-thumbnail {
+  background-image: url("../assets/projects/easy-vcard-thumb.png");
+}
+
+.card-project.elacreativa .card-project-thumbnail {
+  background-image: url("../assets/projects/elacreativa-thumb.webp");
+}
+
 .lightMode .card-project::before,
 .darkMode .card-project::before {
   content: none;
