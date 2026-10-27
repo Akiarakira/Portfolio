@@ -8,7 +8,9 @@ interface Testimonial {
   company?: string;
   avatar?: string;
   rating?: number;
+  profile?: string;
   quote: string;
+  quoteEs?: string;
 }
 
 const testimonials = testimonialsData as Testimonial[];
@@ -68,7 +70,18 @@ const clampRating = (rating?: number) =>
                 </div>
 
                 <blockquote class="testimonial-quote">
-                  {testimonial.quote}
+                  {testimonial.quoteEs ? (
+                    <>
+                      <span lang="en" data-testimonial-language="en">
+                        {testimonial.quote}
+                      </span>
+                      <span lang="es" data-testimonial-language="es">
+                        {testimonial.quoteEs}
+                      </span>
+                    </>
+                  ) : (
+                    testimonial.quote
+                  )}
                 </blockquote>
 
                 <figcaption class="testimonial-author">
@@ -86,7 +99,19 @@ const clampRating = (rating?: number) =>
                     </span>
                   )}
                   <span class="testimonial-author-meta">
-                    <span class="testimonial-name">{testimonial.name}</span>
+                    <span class="testimonial-name">
+                      {testimonial.profile ? (
+                        <a
+                          href={testimonial.profile}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {testimonial.name}
+                        </a>
+                      ) : (
+                        testimonial.name
+                      )}
+                    </span>
                     {(testimonial.role || testimonial.company) && (
                       <span class="testimonial-role">
                         {[testimonial.role, testimonial.company]
