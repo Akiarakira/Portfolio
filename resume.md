@@ -15,31 +15,8 @@
 
 ## 💻 EXPERIENCIA PROFESIONAL
 
-### A-TeamWork
-**Web Developer | [cite_start]August 2025 - Present** [cite: 9, 10]
-
-* [cite_start]Mantenimiento y optimización de múltiples sitios web de comercio electrónico construidos en Shopify y WordPress[cite: 11].
-* [cite_start]Desarrollé nuevas landing pages y colecciones de productos enfocadas en la conversión y el rendimiento móvil[cite: 12].
-* [cite_start]Mejoré la velocidad de carga del sitio en un **47%**, aumentando la puntuación de rendimiento de Lighthouse de **38 a 56** a través de la compresión de imágenes, la optimización de scripts y mejoras en el renderizado del layout[cite: 13].
-* [cite_start]Conduje auditorías de UX y rendimiento utilizando Lighthouse y PageSpeed Insights, implementando soluciones que mejoraron el flujo y la retención del usuario[cite: 14].
-* [cite_start]Colaboré estrechamente con los equipos de diseño y marketing para alinear la estrategia de diseño y los objetivos de conversión[cite: 15].
-* [cite_start]**Stack:** HTML, CSS, JS (JavaScript), Shopify, API, Lighthouse/PageSpeed Insights, Liquid, Figma [cite: 16]
-
-### MBtek (Part-Time)
-**Full-Stack Web Developer | [cite_start]August 2024 - Present** [cite: 17, 18]
-
-* [cite_start]Desarrollé y mantuve sitios de comercio electrónico de Shopify con personalización avanzada de temas usando Liquid[cite: 18].
-* [cite_start]Depuré y resolví problemas relacionados con el tema para garantizar una funcionalidad y UX fluidas[cite: 19].
-* [cite_start]Automatizé la generación de Certificados de Garantía activada por webhooks de Shopify a través de una API personalizada de Node.js/Express, generé PDFs con Puppeteer e integré la API de Hubspot[cite: 20].
-* [cite_start]Creé un snippet personalizado de "Comprados Juntos Frecuentemente" que muestra y añade dinámicamente productos relacionados al carrito, mejorando la venta cruzada y la participación del usuario[cite: 21].
-* [cite_start]Construí landing pages dinámicas y mejoré los visuales frontend con HTML, CSS y JavaScript[cite: 22].
-* [cite_start]Optimizé las métricas de rendimiento frontend y la respuesta de la UI, con un enfoque en mejorar la experiencia de compra móvil[cite: 23].
-* [cite_start]Trabajé en estrecha colaboración con los equipos de diseño y marketing para implementar nuevas características, landing pages y campañas creativas[cite: 24].
-* [cite_start]Aumenté la conversión con el **System Builder**, un cuestionario complejo que añade automáticamente al carrito todos los productos necesarios para instalar un sistema HVAC basado en las necesidades del usuario[cite: 25].
-* [cite_start]**Stack:** HTML, CSS, JS (JavaScript), Shopify, Liquid, Nodejs, ExpressJS, Hubspot, GraphQL & REST APIS [cite: 26]
-
 ### Exologic (Contractor)
-**Web Developer | [cite_start]December 2024 - August 2025 (+ December 2025)** [cite: 27]
+**Web Developer | [cite_start]December 2024 - Present** [cite: 27]
 
 * [cite_start]Trabajé como desarrolladora freelance (contratista), demostrando consistentemente profesionalismo, una fuerte ética de trabajo y adaptabilidad a prioridades cambiantes[cite: 27].
 * [cite_start]Mejoré el rendimiento y la calidad del código en múltiples proyectos; utilicé auditorías de Lighthouse para web vitals, conduje pruebas multi-dispositivo y apliqué consistentemente principios de Optimización de la Tasa de Conversión (CRO)[cite: 28].
@@ -50,6 +27,29 @@
     * [cite_start]Desarrollo y Optimización Front-End para el sitio web de la compañía[cite: 33].
     * [cite_start]Construí componentes de Interfaz de Usuario (UI) responsivos usando HTML, CSS y Tailwind CSS[cite: 34].
 * [cite_start]**Stack:** HTML, CSS, JS (JavaScript), React, Tailwind CSS, Daisy UI, MongoDB, Nodejs, AlpineJS, Lighthouse [cite: 35]
+
+### A-TeamWork
+**Web Developer | [cite_start]August 2025 - October 2026** [cite: 9, 10]
+
+* [cite_start]Mantenimiento y optimización de múltiples sitios web de comercio electrónico construidos en Shopify y WordPress[cite: 11].
+* [cite_start]Desarrollé nuevas landing pages y colecciones de productos enfocadas en la conversión y el rendimiento móvil[cite: 12].
+* [cite_start]Mejoré la velocidad de carga del sitio en un **47%**, aumentando la puntuación de rendimiento de Lighthouse de **38 a 56** a través de la compresión de imágenes, la optimización de scripts y mejoras en el renderizado del layout[cite: 13].
+* [cite_start]Conduje auditorías de UX y rendimiento utilizando Lighthouse y PageSpeed Insights, implementando soluciones que mejoraron el flujo y la retención del usuario[cite: 14].
+* [cite_start]Colaboré estrechamente con los equipos de diseño y marketing para alinear la estrategia de diseño y los objetivos de conversión[cite: 15].
+* [cite_start]**Stack:** HTML, CSS, JS (JavaScript), Shopify, API, Lighthouse/PageSpeed Insights, Liquid, Figma [cite: 16]
+
+### MBtek (Part-Time)
+**Full-Stack Web Developer | [cite_start]August 2024 - February 2026** [cite: 17, 18]
+
+* [cite_start]Desarrollé y mantuve sitios de comercio electrónico de Shopify con personalización avanzada de temas usando Liquid[cite: 18].
+* [cite_start]Depuré y resolví problemas relacionados con el tema para garantizar una funcionalidad y UX fluidas[cite: 19].
+* [cite_start]Automatizé la generación de Certificados de Garantía activada por webhooks de Shopify a través de una API personalizada de Node.js/Express, generé PDFs con Puppeteer e integré la API de Hubspot[cite: 20].
+* [cite_start]Creé un snippet personalizado de "Comprados Juntos Frecuentemente" que muestra y añade dinámicamente productos relacionados al carrito, mejorando la venta cruzada y la participación del usuario[cite: 21].
+* [cite_start]Construí landing pages dinámicas y mejoré los visuales frontend con HTML, CSS y JavaScript[cite: 22].
+* [cite_start]Optimizé las métricas de rendimiento frontend y la respuesta de la UI, con un enfoque en mejorar la experiencia de compra móvil[cite: 23].
+* [cite_start]Trabajé en estrecha colaboración con los equipos de diseño y marketing para implementar nuevas características, landing pages y campañas creativas[cite: 24].
+* [cite_start]Aumenté la conversión con el **System Builder**, un cuestionario complejo que añade automáticamente al carrito todos los productos necesarios para instalar un sistema HVAC basado en las necesidades del usuario[cite: 25].
+* [cite_start]**Stack:** HTML, CSS, JS (JavaScript), Shopify, Liquid, Nodejs, ExpressJS, Hubspot, GraphQL & REST APIS [cite: 26]
 
 ### Top Of The Line VA
 **Web Developer | [cite_start]June 2023 - June 2024** [cite: 36, 37]

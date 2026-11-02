@@ -15,9 +15,22 @@ I specialize in turning complex operational and product data problems into pract
 
 ## Work Experience
 
+### Exologic -- Remote
+**Web Developer / Contractor**  
+December 2024 - Present
+
+- Worked as a freelance contractor, managing multiple project priorities with professionalism, adaptability, and a strong delivery focus.
+- Improved performance and code quality across projects using Lighthouse audits, web vitals checks, multi-device testing, and CRO principles.
+- Developed application UIs and features for Deliverate and Localchat using Tailwind CSS, DaisyUI, Alpine.js, and JavaScript.
+- Integrated real-time map visualization for delivery tracking to improve the user experience.
+- Developed and optimized responsive UI components for the company website using HTML, CSS, and Tailwind CSS.
+- Used Figma and Canva to prototype interfaces before front-end implementation.
+
+**Stack:** HTML, CSS, JavaScript, React, Tailwind CSS, DaisyUI, MongoDB, Node.js, Alpine.js, Lighthouse, Figma, Canva
+
 ### A-TeamWork -- Remote
 **Web Developer**  
-August 2025 - Present
+August 2025 - October 2026
 
 - Maintain, optimize, and improve multiple Shopify and WordPress websites with a focus on performance, conversion, and mobile-first UX.
 - Built a local Shopify data normalization app to clean and standardize 3,500+ products and 7,300+ variants with inconsistent catalog data.
@@ -32,7 +45,7 @@ August 2025 - Present
 
 ### MBtek -- Remote
 **Full-Stack Web Developer**  
-August 2024 - Present
+August 2024 - February 2026
 
 - Developed and maintained Shopify e-commerce sites with advanced theme customization using Liquid.
 - Debugged and resolved theme-related issues to ensure seamless UX, reliable functionality, and responsive shopping experiences.
@@ -44,19 +57,6 @@ August 2024 - Present
 - Worked closely with design and marketing teams to implement new features, landing pages, and campaign assets.
 
 **Stack:** HTML, CSS, JavaScript, Shopify, Liquid, Node.js, Express.js, HubSpot, GraphQL, REST APIs, Puppeteer
-
-### Exologic -- Remote
-**Web Developer / Contractor**  
-December 2024 - August 2025
-
-- Worked as a freelance contractor, managing multiple project priorities with professionalism, adaptability, and a strong delivery focus.
-- Improved performance and code quality across projects using Lighthouse audits, web vitals checks, multi-device testing, and CRO principles.
-- Developed application UIs and features for Deliverate and Localchat using Tailwind CSS, DaisyUI, Alpine.js, and JavaScript.
-- Integrated real-time map visualization for delivery tracking to improve the user experience.
-- Developed and optimized responsive UI components for the company website using HTML, CSS, and Tailwind CSS.
-- Used Figma and Canva to prototype interfaces before front-end implementation.
-
-**Stack:** HTML, CSS, JavaScript, React, Tailwind CSS, DaisyUI, MongoDB, Node.js, Alpine.js, Lighthouse, Figma, Canva
 
 ### Top Of The Line VA -- Remote
 **Web Developer**  
