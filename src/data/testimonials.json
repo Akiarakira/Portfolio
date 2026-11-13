@@ -54,5 +54,13 @@
     "rating": 5,
     "quote": "Working with Andreina has been an incredible experience. She helped us build and integrate custom Shopify apps into dynamic dashboards, and fully optimized the Morales Solutions website in under two weeks. Flawless technical execution (Node.js, GraphQL, Liquid) with great attention to detail and performance — a results-driven professional I highly recommend.",
     "quoteEs": "Trabajar con Andreina ha sido una experiencia increíble. Nos ayudó a crear e integrar apps personalizadas de Shopify en dashboards dinámicos, y optimizó por completo el sitio web de Morales Solutions en menos de dos semanas. Ejecución técnica impecable (Node.js, GraphQL, Liquid) con gran atención al detalle y al rendimiento — una profesional orientada a resultados que recomiendo ampliamente."
+  },
+  {
+    "name": "Juan Carlos Gamarra Martínez",
+    "role": "Web Developer",
+    "avatar": "",
+    "rating": 5,
+    "quote": "Working alongside Andreina has been an absolute pleasure. She stands out for her strong technical foundation in Shopify 2.0, WordPress, TypeScript, Node.js, and GraphQL, and her constant willingness to support the team on complex projects. Her problem-solving mindset, smart use of AI tools, and graphic design background make her an invaluable asset to any team.",
+    "quoteEs": "Trabajar junto a Andreina ha sido una experiencia excelente. Destaca por su sólida base técnica en Shopify 2.0, WordPress, TypeScript, Node.js y GraphQL, y por su constante disposición para apoyar al equipo en proyectos complejos. Su capacidad resolutiva, su buen uso de herramientas de IA y sus conocimientos de diseño gráfico la convierten en un activo de enorme valor para cualquier equipo."
   }
 ]
